@@ -21,21 +21,13 @@
 	position:relative;
 	background: var(--white);
 	@include background-snow;
-
-	/*display: flex;
+	display: flex;
 	align-items: center;
-	justify-content: start; */
-	display: grid;
-	grid-template-columns: 2fr 1fr 1fr;
+	justify-content: space-between; 
 }
-
-.banner__inner > :nth-child(2),
-.banner__inner > :nth-child(3) {
-	place-self: center;
-}
-
 
 .banner__content {
+	flex-grow: 2;
 	display: inline-flex;
 	justify-content: start;
 	flex-direction: column;
@@ -43,23 +35,28 @@
 }
 
 .banner__actions {
-	
+	flex-grow: 3;
+	gap: 30px;
 	@include flex-column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 		@include tablet-min-width {
 			flex-direction: row;
-			padding-inline-end : 10%;
+
+		
 	}
 }
 
 .light-bulb__actions {
 	display: flex;
+	flex-direction: column;
+
 }
 
 .light-bulb__icon {
-	height:100%;
-	width:auto;
+	
+	height: 80px;
+	width: 80px;
 }
 
 

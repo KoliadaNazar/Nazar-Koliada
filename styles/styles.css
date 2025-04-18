@@ -656,19 +656,13 @@ svg * {
   background-image: radial-gradient(rgba(100, 200, 255, 0.3) 1px, transparent 1px), radial-gradient(rgba(100, 200, 255, 0.25) 1px, transparent 1px), radial-gradient(rgba(100, 200, 255, 0.2) 2px, transparent 2px), linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
   background-size: 60px 60px, 90px 90px, 120px 120px, 100% 100%;
   background-position: 10px 20px, 50px 80px, 90px 30px, 0 0;
-  /*display: flex;
+  display: flex;
   align-items: center;
-  justify-content: start; */
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-}
-
-.banner__inner > :nth-child(2),
-.banner__inner > :nth-child(3) {
-  place-self: center;
+  justify-content: space-between;
 }
 
 .banner__content {
+  flex-grow: 2;
   display: inline-flex;
   justify-content: start;
   flex-direction: column;
@@ -676,25 +670,27 @@ svg * {
 }
 
 .banner__actions {
+  flex-grow: 3;
+  gap: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 @media (min-width: 768px) {
   .banner__actions {
     flex-direction: row;
-    padding-inline-end: 10%;
   }
 }
 
 .light-bulb__actions {
   display: flex;
+  flex-direction: column;
 }
 
 .light-bulb__icon {
-  height: 100%;
-  width: auto;
+  height: 80px;
+  width: 80px;
 }
 
 .banner__features-link {
@@ -1094,7 +1090,7 @@ svg * {
 @media (min-width: 768px) {
   .button-small-medium {
     min-height: 36px;
-    min-width: 130px;
+    min-width: 120px;
   }
 }
 
@@ -1103,7 +1099,7 @@ svg * {
   animation-fill-mode: none;
   border-radius: 40px;
   min-height: 36px;
-  min-width: 130px;
+  min-width: 120px;
 }
 @media (min-width: 768px) {
   .button-medium-large {

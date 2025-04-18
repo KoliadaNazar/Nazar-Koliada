@@ -36,7 +36,7 @@
 	animation-fill-mode: none;
 		@include tablet-min-width {
 			min-height:36px;
-			min-width:130px;
+			min-width:120px;
 		}
 }
 
@@ -46,7 +46,7 @@
 	animation-fill-mode: none;
 	border-radius: 40px;
 	min-height:36px;
-	min-width:130px;
+	min-width:120px;
 		@include tablet-min-width {
 			min-height:40px;
 			min-width:160px;
