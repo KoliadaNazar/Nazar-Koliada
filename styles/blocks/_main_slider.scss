@@ -1,15 +1,11 @@
-.main-slider {
-	@include laptop-min-width {
-		padding-top:14px;
-		padding: 14px 6% 0;
-	}
-}
-
 .slide {
 	display:none;
 	height:300px;
 	width:100%;
 	position:relative;
+		@include desctop-min-width {
+			height:350px;
+		}
 }
 
 .slide._active {
@@ -45,6 +41,11 @@
 	width: 180px;
 	height:300px;
 	object-fit:cover;
+	@include desctop-min-width {
+		width: 210px;
+		height:350px;
+	}
+
 }
 
 .slide__content {

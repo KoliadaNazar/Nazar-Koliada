@@ -4,7 +4,6 @@
   flex-direction: column;
 }
 
-
 .page-layout__wrapper {
   @include flex-column;
   min-height:100%;
@@ -19,9 +18,10 @@
 
 .home-layout {
   display:grid;
-  justify-content:center;
+  justify-items: center;
   grid-template-columns: minmax(0, 1fr);
   row-gap:24px;
+  width: 100%;
 }
 
 header {
@@ -30,12 +30,21 @@ header {
 
 .container,
 .section {
-  padding-left:18px;
   position:relative;
-  
+  padding-left:50px;
+  width:100%;
   @include laptop-min-width {
-    padding-left:6%;
-    padding-right:6%;
+    max-width: 1600px;
+    margin:0 auto;
     }
   }
+
+.banner__container {
+  width:100%;
+  @include laptop-min-width {
+    padding: 14px 50px 0 50px;
+    max-width: 1600px;
+    margin:0 auto;
+	}
+}
 

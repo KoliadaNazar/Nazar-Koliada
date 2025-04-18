@@ -1,16 +1,16 @@
 
-.categories-menu__inner {
-  display: grid;
-  place-items: center;
-  overflow-x: auto;
+.categories-menu__inner  {
+	display: grid;
+	place-items: center;
+	overflow-x: auto;
 }
-
 .categories-menu__grid {
-  position:relative;
-  gap:50px;
-  display: inline-grid;
+	position:relative;
+  display: grid;
+	grid-column-gap:50px;
   grid-auto-flow:column;
   grid-auto-columns:max-content;
+	padding-right: 18px;
 }
 
 .category-small {
@@ -55,7 +55,7 @@
 }
 
 
-@include laptop-min-width {
+/* @include laptop-min-width {
   .categories-menu__grid {
     scrollbar-width: none; // для Firefox
 
@@ -63,4 +63,4 @@
       display: none; // для Chrome, Safari
     }
   }
-}   
+}   отсключение скроллбара*/

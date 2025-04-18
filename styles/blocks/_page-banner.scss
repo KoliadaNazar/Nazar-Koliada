@@ -1,7 +1,6 @@
 .banner--border {
 	border-top: 1px solid var(--divider-light-blue-transparent);
 	border-bottom: 1px solid var(--divider-light-blue-transparent);
-
 		@include laptop-min-width {
 			border: 2px solid var(--divider-light-blue-transparent);
 			border-radius: 10px; 
@@ -9,25 +8,22 @@
   }
 }  
 
-.banner {
-	@include laptop-min-width {
-	padding: 0 6%;
-	}
-}
-
 .banner__inner {
 	padding: 16px;
-	min-height:300px;
+	min-height:200px;
 	position:relative;
 	background: var(--white);
 	@include background-snow;
 	display: flex;
 	align-items: center;
-	justify-content: space-between; 
+	justify-content: start; 
+
+		@include laptop-min-width {
+			justify-content: space-evenly; 
+		}
 }
 
 .banner__content {
-	flex-grow: 2;
 	display: inline-flex;
 	justify-content: start;
 	flex-direction: column;
@@ -35,30 +31,19 @@
 }
 
 .banner__actions {
-	flex-grow: 3;
 	gap: 30px;
 	@include flex-column;
 	justify-content: space-around;
 	align-items: center;
 		@include tablet-min-width {
 			flex-direction: row;
-
-		
 	}
 }
 
 .light-bulb__actions {
 	display: flex;
 	flex-direction: column;
-
 }
-
-.light-bulb__icon {
-	
-	height: 80px;
-	width: 80px;
-}
-
 
 .banner__features-link {
 	display: inline-block;

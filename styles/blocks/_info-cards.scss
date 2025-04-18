@@ -6,11 +6,10 @@
 }
 
 .info-cards__grid-container {
-  grid-auto-flow:column;
-  grid-auto-columns: max-content;
   display:grid;
   gap:20px;
-  padding: 0 18px 0 0;
+  grid-auto-flow:column;
+  grid-auto-columns: max-content;
   width: max-content;
 }
 
