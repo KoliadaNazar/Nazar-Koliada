@@ -1262,7 +1262,7 @@ header {
 .container,
 .section {
   position: relative;
-  padding-left: 50px;
+  padding-left: 18px;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -1270,6 +1270,7 @@ header {
   .section {
     max-width: 1600px;
     margin: 0 auto;
+    padding-left: 50px;
   }
 }
 
