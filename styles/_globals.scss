@@ -1,0 +1,147 @@
+
+@mixin background-universe { 
+  background: rgba(0, 18, 36, 0.9);
+  box-shadow: inset 0 0 100px rgba(0, 77, 153, 0.6);  
+}
+
+@mixin background-snow {
+	background-image:
+    radial-gradient(rgba(100, 200, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(rgba(100, 200, 255, 0.25) 1px, transparent 1px),
+    radial-gradient(rgba(100, 200, 255, 0.2) 2px, transparent 2px),
+    linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+  background-size:
+    60px 60px,
+    90px 90px,
+    120px 120px,
+    100% 100%;
+  background-position:
+    10px 20px,
+    50px 80px,
+    90px 30px,
+    0 0;
+  }
+
+  @mixin background-blue-dotted {
+    background-color: #001f33;
+    background-image:
+      radial-gradient(circle, rgba(100, 200, 255, 0.4) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.3) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.2) 2px, transparent 2px),
+      linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+    background-size:
+      40px 40px,
+      80px 80px,
+      120px 120px,
+      100% 100%;
+    background-position:
+      0 0,
+      20px 30px,
+      60px 90px,
+      0 0;
+  }
+
+  @mixin background-blue-dotted-x2 {
+    background-color: #001f33;
+    background-image:
+      radial-gradient(circle, rgba(100, 200, 255, 0.4) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.3) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.2) 2px, transparent 2px),
+      linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+    background-size:
+      40px 40px,
+      80px 80px,
+      120px 120px,
+      100% 100%;
+    background-position:
+      0 0,
+      20px 30px,
+      60px 90px,
+      0 0;
+   }
+
+  @mixin background-triangle-grid {
+      background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, 
+      rgba(100, 200, 255, 0.3) 40px),
+    repeating-linear-gradient(60deg, transparent, transparent 39px, 
+      rgba(100, 200, 255, 0.3) 40px),
+    repeating-linear-gradient(-60deg, transparent, transparent 39px, 
+      rgba(100, 200, 255, 0.3) 40px),
+    linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+    background-size: 100% 100%;
+   }
+
+
+
+
+body {
+    font-family: var(--font--family-base);
+    font-weight:400;
+    font-size:14px;
+    line-height:1.28;
+    color: var(--main-theme-dark);
+    @include background-universe;
+    
+    
+}
+
+a, button , input, textarea, svg * {
+    transition-duration: var(  --transition-duration);
+    
+}
+
+a, button {
+    transition: transform .3s ease;
+}
+
+button:active {
+    transform: scale(1.09);
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+a, button {
+	text-transform:uppercase;
+  cursor: pointer;
+}
+
+ h1 , h2 , h3, h4, {
+    font-size: 18px;
+    font-weight: 500;
+ }
+
+ 
+ picture {
+	display:block;
+ }
+
+ svg {
+	color:var(--divider-light-blue-transparent);
+ }
+
+
+::-webkit-scrollbar {
+  height: 6px; /*высот адля горизонтального скролбара*/
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--divider-light-blue-transparent);
+  border-radius: 4px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/*@include laptop-min-width {
+  .categories-menu__grid {
+    scrollbar-width: none; // для Firefox
+
+    &::-webkit-scrollbar {
+      display: none; // для Chrome, Safari
+    }
+  }
+} */

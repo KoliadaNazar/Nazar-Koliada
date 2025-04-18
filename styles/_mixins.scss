@@ -1,0 +1,53 @@
+
+@mixin clean-link {
+  color:inherit;
+
+  &, &:hover { 
+    text-decoration:none;
+  }
+        
+}
+
+@mixin reset-button {
+  padding:0;
+  background-color:transparent;
+}
+
+@mixin flex-center {
+  display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin absolute-center {
+	position:absolute;
+	top:50%;
+	left:50%;
+	translate: -50% -50%;
+}
+
+@mixin hover {
+  @media (hover: hover)   {
+    &:hover {
+      @content;
+      }
+    }
+
+  @media (hover: none)    {
+    &:active {
+      @content;
+    }
+  }
+}
+
+svg {
+  @include hover {
+   color:var(--white);
+   transition: color 0.3s ease, transform 0.3s ease;
+   }
+ }

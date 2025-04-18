@@ -1,0 +1,37 @@
+:root {
+    --padding-section: padding: 12px 6%;
+
+    --main--bg: background-image: 
+    linear-gradient(rgba(0, 119, 204, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 119, 204, 0.04) 1px, transparent 1px);
+    
+    --main-theme-dark: black;
+    --white: rgb(255, 255, 255);
+    --border-radius: 30px;
+    --border-radius-small: 30px;
+    --border-radius-large: 30px;
+    --font--family-base: 'sans-serif'; 
+    --transition-duration: .3s;
+    --blue-main-theme:linear-gradient(90deg, 
+    rgba(0, 8, 26, 1) 0%, 
+    rgba(0, 36, 77,  1) 50%, 
+    rgba(0, 24, 48,  1) 100%);
+
+    /*----------------------------button*----------------------------------------*/
+    --button-blue-border-gradient:linear-gradient(90deg, rgba(0,0,0,1),  rgba(0,193,255,0.96));
+    --button-blue-border-gradient--hover:linear-gradient(270deg, rgba(0, 193, 255, 0.96) 0%, rgba(0, 193, 255, 0.96) 100%);
+
+    --button-blue-background: linear-gradient(90deg, rgba(0,68,161,1) 0%, rgba(0,140,185,0.9598214285714286) 100%);
+    --button-blue-background--hover: linear-gradient(90deg, rgba(0, 90, 200, 1) 0%, rgba(0, 180, 230, 0.96) 100%);
+    --red-button-background:linear-gradient(135deg, rgba(132, 0, 0, 1) 0%, rgba(90, 0, 0, 1) 40%, rgba(46, 0, 0, 1) 100%);
+
+    --button-background-shadow:inset 2px 2px 10px rgba(0, 40, 90, 0.8),inset -2px -2px 10px rgba(0, 100, 150, 0.2);
+    --button-shadow--hover:0 0 10px rgba(0, 180, 255, 0.8), 0 0 50px rgba(0, 120, 255, 0.4);
+    /*----------------------------button*----------------------------------------*/
+    --divider-light-blue-transparent: rgba(200, 230, 255, 0.7);
+    --text-shadow-blue: 0 0 8px rgba(100, 200, 255, 0.4);
+    --blue-category-divider: linear-gradient(to bottom, transparent, rgba(200, 230, 255, 0.7), transparent);
+    
+
+    
+}

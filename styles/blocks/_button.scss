@@ -1,0 +1,76 @@
+.button {
+	text-transform: uppercase;
+	position:relative;
+	text-align:center;
+	color: #ffffff;
+	background: var(--button-blue-border-gradient);
+	text-shadow:var(--text-shadow-blue);
+	z-index:1;
+	white-space: nowrap;
+	padding: 5px 20px;
+}
+
+.button-background {
+	border-radius:inherit;
+	position:absolute;
+	box-shadow:var(--button-background-shadow);
+	inset:2px;
+	z-index: -1;
+}
+
+.button-primary {
+	background: var(--button-blue-background);
+}
+
+.button-secondary {
+	background: var(--red-button-background);
+}
+
+
+.button-small-medium {
+	border-radius: 30px;
+	min-height:32px;
+	min-width:100px;
+	animation: border-animation-360  0.5s ease-in-out 1.8 forwards;
+	animation-delay: 1s; 
+	animation-fill-mode: none;
+		@include tablet-min-width {
+			min-height:36px;
+			min-width:130px;
+		}
+}
+
+
+.button-medium-large {
+	animation-delay: 2s;
+	animation-fill-mode: none;
+	border-radius: 40px;
+	min-height:36px;
+	min-width:130px;
+		@include tablet-min-width {
+			min-height:40px;
+			min-width:160px;
+		}
+	
+}
+
+.button--animation {
+	animation: border-animation-360  0.7s ease-in-out 2 forwards;
+	animation-delay: 1s;
+	animation-fill-mode: none;
+}
+
+.button {
+	@include hover {
+   box-shadow: var(--button-shadow--hover);
+    background: var(--button-blue-border-gradient--hover);
+    transition: all 0.3s ease;
+  }
+}
+	.button {
+		@include hover {
+			.button-background {
+				background: var(--button-blue-background--hover);
+			}
+		}
+	}

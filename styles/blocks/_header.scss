@@ -1,0 +1,86 @@
+
+.header {
+	background: var(--blue-main-theme);
+  height: 60px;
+	position:fixed;
+	width:100%;
+
+}
+
+.header__inner {
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:10px 12px;
+	height:inherit;
+	position:relative;
+	
+}
+
+.header__inner:after {
+	content: '';
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	height: 1px;
+	width: 100%;
+	background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 0.7), transparent);
+}
+
+
+.auth__buttons {
+	display:flex;
+	gap:12px;
+	position:relative;
+}
+
+.header__logo {
+	position:absolute;
+	left:78px;
+	top:10px;
+}
+
+.header__logo:before {
+	position: absolute;
+	content: '';
+	height: calc(100% - 6px);
+	left: -18px;
+	width: 1px; 
+	background: var( --blue-category-divider);;
+}
+
+.header-nav {
+	left: -300px;
+	transition: left 0.3s ease;
+	height:100%;
+	position:fixed;
+	z-index:10;
+}
+
+.header-nav--active {
+position:fixed;
+top: 60px;
+left: 0;
+bottom: 0;
+z-index:10;
+}
+
+.nav-control {
+	@include flex-center;
+}
+
+.nav-control
+ {
+	@include hover{
+		transform: scale(1.05);
+		transition: transform 0.4s ease;
+	}
+	
+}
+.nav-control:active {
+	transform: scale(1.1);
+}
+
+.burger-icon--hidden {
+	display: none;
+}
