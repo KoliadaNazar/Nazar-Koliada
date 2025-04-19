@@ -1,3 +1,4 @@
+// slider
 function initSlider() {
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.querySelector('.arrow-previous');
@@ -32,13 +33,14 @@ function initSlider() {
     showSlide(0);
     startAutoSlide();
   }
-  //light sidebar below---
+
+  // sidebar below---
   document.addEventListener('DOMContentLoaded', initSlider); 
-  const toggleMenu = document.querySelector('.header-nav');
+  const toggleMenu = document.querySelector('.sidebar');
   const navControl = document.querySelector('.nav-control');
   
   navControl.addEventListener('click', () => {
-    toggleMenu.classList.toggle('header-nav--active');
+    toggleMenu.classList.toggle('sidebar--open');
   
     const menuIcon = document.querySelector('.menu-icon');
     const iconClose = document.querySelector('.menu-icon--close');
@@ -47,6 +49,7 @@ function initSlider() {
     iconClose.classList.toggle('burger-icon--hidden'); 
   });
   
+
   //light bulb below---
   const Switcher = document.querySelector('.light__switcher');
   const lightBulb = document.querySelector('.light-bulb__icon');
@@ -64,28 +67,25 @@ function initSlider() {
     }
   )
 
-  document.querySelectorAll('.arrow-icon').forEach(arrow => {
-    arrow.addEventListener('click', function () {
-      this.classList.toggle('rotated');
-    });
-  });
 
+// --------------Rotate arrow
 
-  
+ //  для всех стрелок
+document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => {
+  arrow.addEventListener('click', function() {
+    //  Вращение стрелки
+    this.classList.toggle('rotated');
+    
+    if (this.classList.contains('sidebar__arrow-icon')) {
+      // Для сайдбар-меню
+      const submenu = this.closest('li').querySelector('.sidebar-submenu');
+      if (submenu) submenu.classList.toggle('sidebar-submenu--open');
+    } 
+    else if (this.closest('.footer__grid-item')) {
+      // Для футера
+      const footerMenu = this.closest('.footer__grid-item').querySelector('.navigation__list');
+      if (footerMenu) footerMenu.classList.toggle('navigation__list--active');
+    }
 
-  /*const arrowMove = document.querySelectorAll('.arrow-icon');
-  arrowMove.forEach(arrow => {
-      arrow.addEventListener('click', ()=> {
-      const footerTitle = document.querySelector('.navigation__list');
-      footerTitle.classList.toggle('navigation__list--active');
-      });
-  }); */
-
-
-  const arrowMove = document.querySelectorAll('.arrow-icon'); 
-    arrowMove.forEach(arrow => {
-    arrow.addEventListener('click', () => {
-    const footerTitle = arrow.closest('.footer__grid-item').querySelector('.navigation__list');
-    footerTitle.classList.toggle('navigation__list--active');
   });
 });

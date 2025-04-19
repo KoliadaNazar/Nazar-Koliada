@@ -3,10 +3,10 @@ body {
   font-family: var(--font--family-base);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.28;
   color: var(--main-theme-dark);
   background: rgba(0, 18, 36, 0.9);
   box-shadow: inset 0 0 100px rgba(0, 77, 153, 0.6);
+  letter-spacing: 1.4px;
 }
 
 a, button, input, textarea, svg * {
@@ -79,66 +79,33 @@ body::-webkit-scrollbar {
   }
 }
 
-/**
-  Нормализация блочной модели
- */
 *,
 ::before,
 ::after {
   box-sizing: border-box !important;
 }
 
-a {
-  display: inline-block;
-  cursor: pointer;
-}
-
-button {
-  all: unset; /* Сбрасывает все стандартные стили */
-  display: inline-block;
-  border: none;
-  padding: 0;
-  font-family: inherit;
-  text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  -webkit-appearance: none; /* Убирает стиль системных кнопок в некоторых браузерах */
-}
-
-button,
-label {
-  cursor: pointer;
-}
-
-/*button:active {
-  opacity: 0.8; --Легкое затемнение при нажатии 
-} 
-
-button:hover { 
-  opacity: 0.9;  --Легкое затемнение при наведении 
-} */
-/**
-  Убираем внутренние отступы слева тегам списков,
-  у которых есть атрибут class
- */
 :where(ul, ol):where([class]) {
   padding-left: 0;
 }
 
-/**
-  Убираем внешние отступы body и двум другим тегам,
-  у которых есть атрибут class
- */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class */
 body,
 :where(blockquote, figure):where([class]) {
   margin: 0;
 }
 
-/**
-  Убираем внешние отступы вертикали нужным тегам,
-  у которых есть атрибут class
- */
+/**Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class*/
 :where(h1,
 h2,
 h3,
@@ -162,23 +129,9 @@ dl):where([class]) {
   border: none;
 }
 
-/**
-  Убираем стандартный маркер маркированному списку,
-  у которого есть атрибут class
- */
-:where(ul[class]) {
-  list-style: none;
-}
-
-:where(address[class]) {
-  font-style: normal;
-}
-
-/**
-  Обнуляем вертикальные внешние отступы параграфа,
+/**Обнуляем вертикальные внешние отступы параграфа,
   объявляем локальную переменную для внешнего отступа вниз,
-  чтобы избежать взаимодействие с более сложным селектором
- */
+  чтобы избежать взаимодействие с более сложным селектором*/
 p {
   --paragraphMarginBottom: 24px;
   margin-block: 0;
@@ -202,9 +155,7 @@ video {
   height: auto;
 }
 
-/**
-  Наследуем свойства шрифт для полей ввода
- */
+/**Наследуем свойства шрифт для полей ввода*/
 input,
 textarea,
 select,
@@ -213,22 +164,15 @@ button {
 }
 
 html {
-  /**
-    Пригодится в большинстве ситуаций
-    (когда, например, нужно будет "прижать" футер к низу сайта)
-   */
+  /**Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта*/
   height: 100%;
-  /**
-    Убираем скачок интерфейса по горизонтали
-    при появлении / исчезновении скроллбара
-   */
-  /*scrollbar-gutter: stable; */
-  /*overflow-y: scroll; */
+  /**Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара*/
+  scrollbar-gutter: stable;
 }
 
-/**
-  Плавный скролл
- */
+/**Плавный скролл*/
 html,
 :has(:target) {
   scroll-behavior: smooth;
@@ -240,24 +184,34 @@ body {
     (когда, например, нужно будет "прижать" футер к низу сайта)
    */
   min-height: 100%;
-  /**
-    Унифицированный интерлиньяж
-   */
-  line-height: 1.5;
 }
 
-/**
-  Нормализация высоты элемента ссылки при его инспектировании в DevTools
- */
+button {
+  all: unset; /* Сбрасывает все стандартные стили */
+  display: inline-block;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-appearance: none; /* Убирает стиль системных кнопок в некоторых браузерах */
+}
+
+a,
+button,
+label {
+  cursor: pointer;
+}
+
 a:where([class]) {
   display: inline-flex;
 }
 
-/**
-  Приводим к единому цвету svg-элементы
+/**Приводим к единому цвету svg-элементы
   (за исключением тех, у которых уже указан
-  атрибут fill со значением 'none' или начинается с 'url')
- */
+  атрибут fill со значением 'none' или начинается с 'url')*/
 :where([fill]:not([fill=none],
 [fill^=url])) {
   fill: currentColor;
@@ -280,18 +234,8 @@ svg * {
   transition-property: fill, stroke;
 }
 
-/**
-  Приведение рамок таблиц в классический 'collapse' вид
- */
-:where(table) {
-  border-collapse: collapse;
-  border-color: currentColor;
-}
-
-/**
-  Удаляем все анимации и переходы для людей,
-  которые предпочитают их не использовать
- */
+/**Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать*/
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,
@@ -487,12 +431,12 @@ svg * {
   display: grid;
   grid-row-gap: 4px;
   z-index: 0;
-  width: 100%;
   margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
 }
 @media (min-width: 1024px) {
   .footer__grid-container {
-    padding: 0 18% 0 18%;
     grid-template-rows: auto;
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 52px;
@@ -612,6 +556,7 @@ svg * {
 
 .links__container {
   margin: 0 auto;
+  width: 100%;
 }
 
 .cards_links {
@@ -643,6 +588,7 @@ svg * {
 }
 
 .banner__inner {
+  gap: 10px;
   padding: 16px;
   min-height: 200px;
   position: relative;
@@ -668,7 +614,8 @@ svg * {
 }
 
 .banner__actions {
-  gap: 30px;
+  margin-top: 40px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -677,6 +624,8 @@ svg * {
 @media (min-width: 768px) {
   .banner__actions {
     flex-direction: row;
+    margin-top: 0;
+    gap: 50px;
   }
 }
 
@@ -879,11 +828,23 @@ svg * {
     }
   }
 }   отсключение скроллбара*/
-.page-wrapper {
-  position: relative;
+.sidebar {
+  left: -300px;
+  transition: left 0.3s ease;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
-.sidebar {
+.sidebar--open {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.sidebar__inner {
   position: absolute;
   inset: 0;
   background: var(--blue-main-theme);
@@ -894,44 +855,39 @@ svg * {
 
 .nav-list {
   display: grid;
-  gap: 10px;
-  padding-top: 16px;
-  padding-inline-start: 14px;
+  gap: 12px;
+  padding-top: 18px;
 }
 
 .nav-list__item {
   position: relative;
-  padding: 6px 6px;
-  min-height: 36px;
+  padding: 4px 4px 4px 20px;
 }
 
-.nav-list__item:after {
+.nav-list__link:after {
   content: "";
   position: absolute;
   width: 130px;
   height: 1px;
-  bottom: -6px;
+  bottom: -13px;
+  left: 0;
   background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 0.7), transparent);
-}
-
-.nav-list__item--secondary {
-  font-size: 16px;
 }
 
 .nav-list__item--secondary:after {
   content: "";
   position: absolute;
-  width: 150px;
+  width: 170px;
   height: 2px;
-  left: -4px;
+  left: 0;
   bottom: -6px;
   background: linear-gradient(90deg, transparent, rgba(200, 0, 0, 0.8), rgba(255, 60, 60, 0.9), transparent);
 }
 
 .nav-list__link {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 8px;
+  position: relative;
+  display: inline-flex;
+  gap: 12px;
   justify-content: start;
   align-items: end;
 }
@@ -950,6 +906,81 @@ svg * {
   .nav-list__title:active {
     color: var(--white);
   }
+}
+
+/*-----------------------------------------------arrow----------------------------------------------------------*/
+.sidebar-arrow {
+  position: absolute;
+  width: 70px;
+  height: 34px;
+  top: 0;
+  right: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.sidebar-arrow:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  left: -10px;
+  top: -4px;
+  width: 1px;
+  background: var(--blue-category-divider);
+}
+
+/*----------------------------------Sub MENU ---------------------------------*/
+.sidebar-submenu {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.sidebar-submenu--open {
+  max-height: 100%;
+  overflow: visible;
+}
+
+.submenu__list {
+  position: relative;
+  padding: 20px 0 0 32px;
+  border-radius: 6px;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.submenu__item {
+  position: relative;
+  padding: 6px;
+}
+
+.submenu__link {
+  color: var(--white);
+}
+
+.submenu__list:before {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 1px;
+  background: var(--white);
+  left: -20px;
+  top: 8px;
+}
+
+.submenu__item:after {
+  position: absolute;
+  content: "";
+  width: 280px;
+  height: 1px;
+  background: var(--white);
+  left: -52px;
+  bottom: 0;
+}
+
+.sidebar__arrow-icon.rotated {
+  transform: rotate(180deg);
 }
 
 .slide {
@@ -1184,22 +1215,6 @@ svg * {
   background: var(--blue-category-divider);
 }
 
-.header-nav {
-  left: -300px;
-  transition: left 0.3s ease;
-  height: 100%;
-  position: fixed;
-  z-index: 10;
-}
-
-.header-nav--active {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  bottom: 0;
-  z-index: 10;
-}
-
 .nav-control {
   display: flex;
   justify-content: center;
@@ -1231,12 +1246,6 @@ svg * {
   min-height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.page-layout__wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
 }
 
 .main-wrapper {

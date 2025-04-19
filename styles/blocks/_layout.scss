@@ -4,10 +4,6 @@
   flex-direction: column;
 }
 
-.page-layout__wrapper {
-  @include flex-column;
-  min-height:100%;
-}
 
 .main-wrapper {
   @include flex-column;

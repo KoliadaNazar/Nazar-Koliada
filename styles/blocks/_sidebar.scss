@@ -1,0 +1,150 @@
+.sidebar {
+	left: -300px;
+	transition: left 0.3s ease;
+	height:100%;
+	position:fixed;
+	z-index:10;
+}
+
+.sidebar--open {
+	position:fixed;
+	top: 60px;
+	left: 0;
+	bottom: 0;
+	z-index:10;
+}
+
+.sidebar__inner {
+	position:absolute;
+	inset:0;
+  background: var(--blue-main-theme);
+	width:280px;
+  height:100%;
+	box-shadow: inset 0 0 12px rgba(50, 210, 255, 0.3),0 4px 20px rgba(0, 0, 0, 0.4),0 2px 6px rgba(0, 149, 255, 0.1);
+}
+
+.nav-list {
+	display: grid;
+	gap: 12px;
+	padding-top:18px;
+}
+
+.nav-list__item {
+	position:relative;
+	padding: 4px 4px 4px 20px;
+}
+
+.nav-list__link:after {
+	content:'';
+	position:absolute;
+	width:130px;
+	height:1px;
+	bottom: -13px;
+	left:0;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(200, 230, 255, 0.7), 
+    transparent);
+}
+
+.nav-list__item--secondary:after {
+	content:'';
+	position:absolute;
+	width:170px;
+	height:2px;
+	left: 0;
+	bottom:-6px;
+	background: linear-gradient(90deg, transparent,rgba(200, 0, 0, 0.8), rgba(255, 60, 60, 0.9), transparent);
+} 
+
+.nav-list__link {
+	position:relative;
+	display: inline-flex;
+	gap:12px;
+	justify-content:start;
+	align-items:end;
+} 
+
+.nav-list__title {
+	font-weight:600;
+	color:var( --divider-light-blue-transparent);
+}
+
+.nav-list__title {
+	@include hover {
+		color:var( --white);
+	}
+}
+
+/*-----------------------------------------------arrow----------------------------------------------------------*/
+
+.sidebar-arrow {
+	position: absolute;
+	width: 70px;
+	height: 34px;
+	top: 0;
+	right:26px;
+	@include flex-center;
+	border-radius: 4px;
+}
+
+.sidebar-arrow:before {
+	position: absolute;
+  content: "";
+  height: 40px;
+	left: -10px;
+	top: -4px;
+  width: 1px;
+  background: var(--blue-category-divider);
+
+} 
+
+/*----------------------------------Sub MENU ---------------------------------*/
+.sidebar-submenu {
+	max-height: 0;
+	overflow: hidden;
+
+
+}
+.sidebar-submenu--open {
+	max-height: 100%;
+	overflow: visible;
+}
+.submenu__list {
+	position: relative;
+	padding: 20px 0 0 32px;
+	border-radius: 6px;
+	display: grid;
+	grid-row-gap: 10px;
+}
+.submenu__item {
+	position: relative;
+	padding:6px;
+}
+.submenu__link {
+	color: var(--white);
+}
+
+.submenu__list:before {
+	position: absolute;
+	content: '';
+	width:280px;
+	height: 1px;
+	background: var(--white);
+	left: -20px;
+	top: 8px;
+}
+
+.submenu__item:after {
+	position: absolute;
+	content: '';
+	width:280px;
+	height: 1px;
+	background: var(--white);
+	left: -52px;
+	bottom: 0;
+} 
+
+.sidebar__arrow-icon.rotated {
+	transform: rotate(180deg);
+}

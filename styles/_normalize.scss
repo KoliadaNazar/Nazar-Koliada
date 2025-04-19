@@ -1,61 +1,30 @@
-/**
-  Нормализация блочной модели
- */
  *,
  ::before,
  ::after {
    box-sizing: border-box !important;
  }
 
- a {
-  display: inline-block;
-  cursor: pointer;
- }
-
- button {
-  all: unset; /* Сбрасывает все стандартные стили */
-  display: inline-block;
-  border: none;
-  padding: 0;
-  font-family: inherit;
-  text-decoration: none;
-  user-select: none;
-  -webkit-appearance: none; /* Убирает стиль системных кнопок в некоторых браузерах */
-}
-
-button,
- label {
-  cursor: pointer;
- }
-/*button:active {
-  opacity: 0.8; --Легкое затемнение при нажатии 
-} 
-
-button:hover { 
-  opacity: 0.9;  --Легкое затемнение при наведении 
-} */
- 
- /**
-   Убираем внутренние отступы слева тегам списков,
-   у которых есть атрибут class
-  */
  :where(ul, ol):where([class]) {
    padding-left: 0;
  }
- 
- /**
-   Убираем внешние отступы body и двум другим тегам,
-   у которых есть атрибут class
-  */
+
+ :where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+ /**Убираем внешние отступы body и двум другим тегам,
+   у которых есть атрибут class */
  body,
  :where(blockquote, figure):where([class]) {
    margin: 0;
  }
  
- /**
-   Убираем внешние отступы вертикали нужным тегам,
-   у которых есть атрибут class
-  */
+ /**Убираем внешние отступы вертикали нужным тегам,
+   у которых есть атрибут class*/
  :where(
    h1,
    h2,
@@ -81,27 +50,12 @@ button:hover {
    border: none;
  }
  
- /**
-   Убираем стандартный маркер маркированному списку,
-   у которого есть атрибут class
-  */
- :where(ul[class]) {
-   list-style: none;
- }
- 
- :where(address[class]) {
-   font-style: normal;
- }
- 
- /**
-   Обнуляем вертикальные внешние отступы параграфа,
+ /**Обнуляем вертикальные внешние отступы параграфа,
    объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
-  */
+   чтобы избежать взаимодействие с более сложным селектором*/
  p {
    --paragraphMarginBottom: 24px;
- 
-   margin-block: 0;
+    margin-block: 0;
  }
  
  /**
@@ -123,34 +77,25 @@ button:hover {
    height: auto;
  }
  
- /**
-   Наследуем свойства шрифт для полей ввода
-  */
- input,
- textarea,
- select,
- button {
+ /**Наследуем свойства шрифт для полей ввода*/
+  input,
+  textarea,
+  select,
+  button {
    font: inherit;
  }
  
  html {
-   /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
+   /**Пригодится в большинстве ситуаций
+     (когда, например, нужно будет "прижать" футер к низу сайта*/
    height: 100%;
-   /**
-     Убираем скачок интерфейса по горизонтали
-     при появлении / исчезновении скроллбара
-    */
-   /*scrollbar-gutter: stable; */
-   /*overflow-y: scroll; */
+   /**Убираем скачок интерфейса по горизонтали
+     при появлении / исчезновении скроллбара*/
+   scrollbar-gutter: stable; 
 
  }
 
- /**
-   Плавный скролл
-  */
+ /**Плавный скролл*/
  html,
  :has(:target) {
    scroll-behavior: smooth;
@@ -162,24 +107,32 @@ button:hover {
      (когда, например, нужно будет "прижать" футер к низу сайта)
     */
    min-height: 100%;
-   /**
-     Унифицированный интерлиньяж
-    */
-   line-height: 1.5;
  }
  
- /**
-   Нормализация высоты элемента ссылки при его инспектировании в DevTools
-  */
+  button {
+    all: unset; /* Сбрасывает все стандартные стили */
+    display: inline-block;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    text-decoration: none;
+    user-select: none;
+    -webkit-appearance: none; /* Убирает стиль системных кнопок в некоторых браузерах */
+  }
+  
+  a,
+  button,
+  label {
+   cursor: pointer;
+  }
+
  a:where([class]) {
    display: inline-flex;
  }
  
- /**
-   Приводим к единому цвету svg-элементы
+ /**Приводим к единому цвету svg-элементы
    (за исключением тех, у которых уже указан
-   атрибут fill со значением 'none' или начинается с 'url')
-  */
+   атрибут fill со значением 'none' или начинается с 'url')*/
  :where([fill]:not(
    [fill="none"],
    [fill^="url"]
@@ -206,18 +159,10 @@ button:hover {
    transition-property: fill, stroke;
  }
  
- /**
-   Приведение рамок таблиц в классический 'collapse' вид
-  */
- :where(table) {
-   border-collapse: collapse;
-   border-color: currentColor;
- }
- 
- /**
-   Удаляем все анимации и переходы для людей,
-   которые предпочитают их не использовать
-  */
+
+
+ /**Удаляем все анимации и переходы для людей,
+   которые предпочитают их не использовать*/
  @media (prefers-reduced-motion: reduce) {
    *,
    ::before,

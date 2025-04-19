@@ -9,6 +9,7 @@
 }  
 
 .banner__inner {
+	gap:10px;
 	padding: 16px;
 	min-height:200px;
 	position:relative;
@@ -31,12 +32,15 @@
 }
 
 .banner__actions {
-	gap: 30px;
+	margin-top:40px;
+	gap: 20px;
 	@include flex-column;
 	justify-content: space-around;
 	align-items: center;
 		@include tablet-min-width {
 			flex-direction: row;
+			margin-top:0;
+			gap: 50px;
 	}
 }
 

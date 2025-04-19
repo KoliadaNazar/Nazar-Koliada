@@ -49,22 +49,6 @@
 	background: var( --blue-category-divider);;
 }
 
-.header-nav {
-	left: -300px;
-	transition: left 0.3s ease;
-	height:100%;
-	position:fixed;
-	z-index:10;
-}
-
-.header-nav--active {
-position:fixed;
-top: 60px;
-left: 0;
-bottom: 0;
-z-index:10;
-}
-
 .nav-control {
 	@include flex-center;
 }
