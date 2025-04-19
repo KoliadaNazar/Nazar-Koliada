@@ -404,6 +404,66 @@ svg * {
     opacity: 1;
   }
 }
+@keyframes scalePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.preloader {
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgb(100, 200, 255) 1px, transparent 1px), radial-gradient(rgb(80, 180, 240) 1px, transparent 1px), radial-gradient(rgb(60, 160, 220) 2px, transparent 2px), linear-gradient(to bottom, rgb(0, 50, 100), rgb(0, 100, 150));
+  background-size: 60px 60px, 90px 90px, 120px 120px, 100% 100%;
+  background-position: 10px 20px, 50px 80px, 90px 30px, 0 0;
+  z-index: 1000;
+}
+
+.preloader.preloader--loaded {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.preloader__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.preloader__circle {
+  position: relative;
+  animation: border-animation-360 0.7s ease-in-out infinite;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  background: var(--button-blue-border-gradient);
+  text-shadow: var(--text-shadow-blue);
+  box-shadow: var(--button-shadow--hover);
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.preloader__circle--bg {
+  border-radius: inherit;
+  position: absolute;
+  box-shadow: var(--button-background-shadow);
+  inset: 2px;
+  z-index: -1;
+  background: var(--button-blue-background--hover);
+}
+
+.preloadet__text {
+  animation: scalePulse 2s ease-in-out infinite;
+  position: absolute;
+  left: 20px;
+  top: 44px;
+}
+
 .footer {
   background: var(--blue-main-theme);
   position: relative;
@@ -552,6 +612,7 @@ svg * {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
+  width: auto;
 }
 
 .links__container {
@@ -874,13 +935,13 @@ svg * {
   background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 0.7), transparent);
 }
 
-.nav-list__item--secondary:after {
+.nav-list__link--secondary:after {
   content: "";
   position: absolute;
   width: 170px;
   height: 2px;
-  left: 0;
-  bottom: -6px;
+  left: -14px;
+  bottom: -14px;
   background: linear-gradient(90deg, transparent, rgba(200, 0, 0, 0.8), rgba(255, 60, 60, 0.9), transparent);
 }
 
@@ -974,7 +1035,7 @@ svg * {
   content: "";
   width: 280px;
   height: 1px;
-  background: var(--white);
+  background: var(--divider-light-blue-transparent);
   left: -52px;
   bottom: 0;
 }

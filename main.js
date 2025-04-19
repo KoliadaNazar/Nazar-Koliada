@@ -89,3 +89,14 @@ document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => 
 
   });
 });
+
+//// --------------Preloader
+
+window.addEventListener('load', function() {
+  const preloader = document.querySelector('.preloader');
+  preloader.classList.add('preloader--loaded');
+  
+  setTimeout(() => {
+    preloader.remove();
+  }, 500);
+});

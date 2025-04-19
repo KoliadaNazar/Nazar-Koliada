@@ -47,13 +47,13 @@
     transparent);
 }
 
-.nav-list__item--secondary:after {
+.nav-list__link--secondary:after {
 	content:'';
 	position:absolute;
 	width:170px;
 	height:2px;
-	left: 0;
-	bottom:-6px;
+	left: -14px;
+	bottom: -14px;
 	background: linear-gradient(90deg, transparent,rgba(200, 0, 0, 0.8), rgba(255, 60, 60, 0.9), transparent);
 } 
 
@@ -140,7 +140,7 @@
 	content: '';
 	width:280px;
 	height: 1px;
-	background: var(--white);
+	background: var( --divider-light-blue-transparent);
 	left: -52px;
 	bottom: 0;
 } 

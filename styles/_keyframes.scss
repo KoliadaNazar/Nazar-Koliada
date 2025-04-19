@@ -44,3 +44,13 @@
   from {opacity: .4} 
   to {opacity: 1}
 }
+
+@keyframes scalePulse {
+  
+  0%, 100% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.2); 
+  }
+}
