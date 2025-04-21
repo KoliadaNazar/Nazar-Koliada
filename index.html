@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-		<meta charset="utf-8">
+  <head> 
+		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<title>My first web page</title>
 		<link rel="icon" href="images/icon_title.png">
 		<link rel="stylesheet" href="styles/styles.css">
   </head>
-	<body>
+	<body class="no-scroll">
 		<div class="preloader">
 			<diw class="preloader__inner">
 				<div class="preloader__circle">
@@ -42,10 +42,10 @@
 						</a>
 					</div>
 					<div class="auth__buttons">
-						<button class="button button-small-medium ">Sign up
+						<button class="button button-small-medium" id="openForm">Sign up
 							<span class="button-background button-primary"></span>
 						</button>
-						<button class="button button-small-medium ">Log in
+						<button class="button button-small-medium" id="openForm">Log in
 							<span class="button-background button-secondary"></span>
 						</button>
 					</div>
@@ -54,7 +54,7 @@
 			<div class="main-wrapper">
 				<main class="main">
 					<div class="home-layout">
-						<div class="sidebar sidebar--open">
+						<div class="sidebar">
 							<nav class="nav sidebar__inner">
 								<ul class="nav-list">
 									<li class="nav-list__item">
@@ -689,7 +689,80 @@
 				</div> <!--footer wrapper-->
 			</footer> <!--fooger-->
 		</div>
-		
+		<div class="modal-overlay" id="overlay">
+				<div class="dialog">
+					<div class="dialog__inner">
+						<div class="dialog-header">
+							<h1 class="dialog__heading">Registration </h1>
+							<button class="button-close" id="closeForm">
+								<svg class="button-close__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 16.74L7.76 12L3 7.26L7.26 3L12 7.76L16.74 3L21 7.26L16.24 12L21 16.74L16.74 21L12 16.24L7.26 21zm9-3.33l4.74 4.75l1.42-1.42L13.41 12l4.75-4.74l-1.42-1.42L12 10.59L7.26 5.84L5.84 7.26L10.59 12l-4.75 4.74l1.42 1.42z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="dialog-body">
+								<div class="form-cell">
+									<label for="first-name" class="form-cell__label">First name</label>
+									<input id="first-name" placeholder="Your Name" type="text" class="form-cell__input">
+								</div> 
+								<div class="form-cell">
+									<label for="last-name" class="form-cell__label">Last name</label>
+									<input id="last-name" placeholder="Your Last Name" type="text" class="form-cell__input">
+								</div> 
+								<div class="form-cell">
+									<label for="date-birth" class="form-cell__label">Date of your birht</label>
+									<input id="date-birth" placeholder="YYYY-MM-DD" type="date" class="form-cell__input" lang="en">
+								</div>
+								<div class="dialog-separator"><!--Separator--></div>
+								<div class="form-cell">
+									<div class="form-cell__label">Gender</div>
+									<div class="form-radio-group">
+										<div class="form-radio__item">
+											<label for="gender-male" class="form-radio__label">Male</label>
+											<input name="radio-btn" id="gender-male" class="form-radio__input" type="radio">
+										</div>
+										<div class="form-radio__item">
+											<label for="gender-female" class="form-radio__label">Female</label>
+											<input name="radio-btn" id="gender-female" class="form-radio__input" type="radio">
+										</div>
+										<div class="form-radio__item">
+											<label for="gender-other" class="form-radio__label">Other</label>
+											<input name="radio-btn" id="gender-other" class="form-radio__input" type="radio">
+										</div>
+									</div>
+								</div>
+								<div class="form-cell">
+									<label for="Region" class="form-cell__label">Region</label>
+									<select id="Region" class="form-cell__select">
+										<option value="EU">Eeurope</option>
+										<option value="AS">Asia</option>
+										<option value="NA">North America</option>
+										<option value="SA">South America</option>
+										<option value="AF">Africa </option>
+										<option value="AU">Australia</option>
+									</select>
+								</div>
+								<div class="dialog-separator"><!--Separator--></div>
+								<div class="form-cell">
+									<label for="phone" class="form-cell__label">Phone number</label>
+									<input id="phone" type="tel" class="form-cell__input" placeholder="+">
+								</div>
+								<div class="form-cell">
+									<label for="email" class="form-cell__label">E-mail</label>
+									<input id="email" type="email" class="form-cell__input" placeholder="Your e-mail" >
+								</div>
+								<div class="form-cell">
+									<label for="register-password" class="form-cell__label">Password</label>
+									<input id="register-password" type="password" class="form-cell__input" placeholder="Create password" >
+								</div>
+						</div>
+						<div class="dialog-footer">
+							<button class="button button-small-medium ">Join Now
+								<span class="button-background button-secondary"></span>
+							</button>
+						</div>
+					</div>
+			</div>
+		</div>
 		<script src="main.js"></script>
 	</body>
 </html>

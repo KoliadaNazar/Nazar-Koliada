@@ -97,8 +97,6 @@ background-position:
   0 0;
   }
 
-
-
   @mixin background-triangle-grid {
       background:
     repeating-linear-gradient(0deg, transparent, transparent 39px, 
@@ -171,6 +169,10 @@ a, button {
 }
 body::-webkit-scrollbar {
   display: none;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 /*@include laptop-min-width {

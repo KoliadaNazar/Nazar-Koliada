@@ -1,3 +1,9 @@
+// ----lazy-loading
+document.querySelectorAll('img').forEach(img => {
+  img.setAttribute('loading', 'lazy');
+});
+
+
 // slider
 function initSlider() {
     const slides = document.querySelectorAll('.slide');
@@ -99,4 +105,24 @@ window.addEventListener('load', function() {
   setTimeout(() => {
     preloader.remove();
   }, 500);
+});
+
+
+//--open form
+const openButton = document.getElementById('openForm');
+const closeButton = document.getElementById('closeForm');
+const overlay = document.getElementById('overlay');
+const body = document.body;
+
+body.classList.add('no-scroll');
+
+openButton.addEventListener('click', () => {
+  overlay.style.display = 'block';
+  body.classList.add('no-scroll');
+});
+
+// Закрыть форму
+closeButton.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  body.classList.remove('no-scroll'); 
 });
