@@ -171,10 +171,11 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
 
+body::-webkit-scrollbar {
+  display: none;  
+  -ms-overflow-style: none;            /* Chrome, Safari, Opera */
+}
 /*@include laptop-min-width {
   .categories-menu__grid {
     scrollbar-width: none; // для Firefox

@@ -31,8 +31,8 @@
 	border-radius: 30px;
 	min-height:32px;
 	min-width:100px;
-	animation: border-animation-360  0.5s ease-in-out 1.8  forwards;
-	animation-delay: 1s; 
+	animation: border-animation-360  0.5s ease-in-out 1.8 forwards;
+	animation-delay: 3s; 
 	animation-fill-mode: none;
 		@include tablet-min-width {
 			min-height:36px;

@@ -13,6 +13,7 @@ body.no-scroll {
   z-index: 999;
   background: rgba(0, 0, 0, 0.7); 
   padding:80px 10px;
+  animation: fade .5s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 }
 
 .dialog__inner {
@@ -21,9 +22,9 @@ body.no-scroll {
   border: 3px double var(--divider-light-blue-transparent);
   border-radius: 16px;
   width: 320px;
-  min-height: 800px;
+  min-height: 700px;
   @include background-snow-solid;
-  animation: formBackground 4s linear forwards;
+  animation: formBackground 3s linear forwards;
 
     @include laptop-min-width {
       width: 360px;
@@ -53,8 +54,13 @@ body.no-scroll {
 .dialog-body {
   position:relative;
   display: grid;
-  grid-row-gap: 16px;
-  padding: 20px
+  grid-row-gap: 6px;
+  padding: 10px;
+
+    @include tablet-min-width {
+      grid-row-gap: 16px;
+      padding: 20px;
+    }
 }
 
 .dialog-separator {
@@ -80,11 +86,15 @@ input::placeholder {
   outline: none;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
-  height: 32px;
+  height: 42px;
   border-radius: 16px;
   border: none;
   background: var(--blue-main-theme);
   color: var(--white);
+
+  @include tablet-min-width {
+    height: 34px;
+  }
   
 }
 
