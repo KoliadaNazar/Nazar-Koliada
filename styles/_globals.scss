@@ -80,51 +80,48 @@ background-position:
 
   @mixin background-blue-dotted-x4 {
     background-color: #001f33;
-background-image:
-  radial-gradient(circle, rgba(100, 200, 255, 0.4) 1px, transparent 1px),
-  radial-gradient(circle, rgba(100, 200, 255, 0.3) 1px, transparent 1px),
-  radial-gradient(circle, rgba(100, 200, 255, 0.2) 2px, transparent 2px),
-  linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
-background-size:
-  13.33px 13.33px,  /* 40px / 3 */
-  26.67px 26.67px,  /* 80px / 3 */
-  40px 40px,        /* 120px / 3 */
-  100% 100%;
-background-position:
-  0 0,
-  6.67px 10px,      /* 20px / 3, 30px / 3 */
-  20px 30px,        /* 60px / 3, 90px / 3 */
-  0 0;
-  }
+    background-image:
+      radial-gradient(circle, rgba(100, 200, 255, 0.4) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.3) 1px, transparent 1px),
+      radial-gradient(circle, rgba(100, 200, 255, 0.2) 2px, transparent 2px),
+      linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+    background-size:
+      13.33px 13.33px,  /* 40px / 3 */
+      26.67px 26.67px,  /* 80px / 3 */
+      40px 40px,        /* 120px / 3 */
+      100% 100%;
+    background-position:
+      0 0,
+      6.67px 10px,      /* 20px / 3, 30px / 3 */
+      20px 30px,        /* 60px / 3, 90px / 3 */
+      0 0;
+      }
 
   @mixin background-triangle-grid {
-      background:
-    repeating-linear-gradient(0deg, transparent, transparent 39px, 
-      rgba(100, 200, 255, 0.3) 40px),
-    repeating-linear-gradient(60deg, transparent, transparent 39px, 
-      rgba(100, 200, 255, 0.3) 40px),
-    repeating-linear-gradient(-60deg, transparent, transparent 39px, 
-      rgba(100, 200, 255, 0.3) 40px),
-    linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
+    background:
+      repeating-linear-gradient(0deg, transparent, transparent 39px, 
+        rgba(100, 200, 255, 0.3) 40px),
+      repeating-linear-gradient(60deg, transparent, transparent 39px, 
+        rgba(100, 200, 255, 0.3) 40px),
+      repeating-linear-gradient(-60deg, transparent, transparent 39px, 
+        rgba(100, 200, 255, 0.3) 40px),
+      linear-gradient(to bottom, rgba(0, 50, 100, 0.1), rgba(0, 100, 150, 0.2));
     background-size: 100% 100%;
    }
-
-
 
 
 body {
   user-select: none;
   font-family: var(--font--family-base);
-  font-weight:400;
-  font-size:14px;
+  font-weight: 400;
+  font-size: 14px;
   color: var(--main-theme-dark);
   @include background-universe;
-  letter-spacing: 1.4px; // DELETE IT LATER !!!!
+  letter-spacing: 1.2px; // DELETE IT LATER !!!!
 }
 
 a, button , input, textarea, svg * {
-    transition-duration: var(  --transition-duration);
-    
+    transition-duration: var(--transition-duration);
 }
 
 a, button {
@@ -156,9 +153,8 @@ a, button {
  }
 
  svg {
-	color:var(--divider-light-blue-transparent);
+	color:var(--main-light-blue-transparent);
  }
-
 
 ::-webkit-scrollbar {
   height: 6px; /*высот адля горизонтального скролбара*/
@@ -166,7 +162,7 @@ a, button {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--divider-light-blue-transparent);
+  background: var(--main-light-blue-transparent);
   border-radius: 4px;
 }
 

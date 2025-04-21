@@ -9,14 +9,14 @@
 }
 
 @mixin reset-button {
-  padding:0;
-  background-color:transparent;
+  padding: 0;
+  background-color: transparent;
 }
 
 @mixin flex-center {
-  display:flex;
-	justify-content:center;
-	align-items:center;
+  display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 @mixin flex-column {
@@ -25,9 +25,9 @@
 }
 
 @mixin absolute-center {
-	position:absolute;
-	top:50%;
-	left:50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
 	translate: -50% -50%;
 }
 
@@ -47,7 +47,7 @@
 
 svg {
   @include hover {
-   color:var(--white);
+   color: var(--white);
    transition: color 0.3s ease, transform 0.3s ease;
    }
  }

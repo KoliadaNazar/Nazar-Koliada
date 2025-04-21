@@ -1,18 +1,17 @@
 .header {
 	background: var(--blue-main-theme);
   height: 60px;
-	position:fixed;
-	width:100%;
+	position: fixed;
+	width: 100%;
 }
 
 .header__inner {
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	padding:10px 12px;
-	height:inherit;
-	position:relative;
-	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 12px;
+	height: inherit;
+	position: relative;
 }
 
 .header__inner:after {
@@ -20,22 +19,25 @@
 	position: absolute;
 	bottom: 0px;
 	left: 0;
-	height: 1px;
+	height: 2px;
 	width: 100%;
-	background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 0.7), transparent);
+	background: var(--main-light-blue-transparent);
+		@include laptop-min-width {
+			height: 1px;
+			background: var(--blue-tiny--divider);			
+		}		
 }
 
-
 .auth__buttons {
-	display:flex;
-	gap:12px;
-	position:relative;
+	display: flex;
+	gap: 12px;
+	position: relative;
 }
 
 .header__logo {
-	position:absolute;
-	left:78px;
-	top:10px;
+	position: absolute;
+	left: 78px;
+	top: 10px;
 }
 
 .header__logo:before {
@@ -44,7 +46,7 @@
 	height: calc(100% - 6px);
 	left: -18px;
 	width: 1px; 
-	background: var( --blue-category-divider);;
+	background: var(--blue-vertical-category-divider);
 }
 
 .nav-control {

@@ -6,41 +6,40 @@
 }
 
 .info-cards__grid-container {
-  display:grid;
-  gap:20px;
-  grid-auto-flow:column;
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
   grid-auto-columns: max-content;
   width: max-content;
 }
 
 .info-card__grid-item {
-  position:relative;
-  height:230px;
-  margin-bottom:20px;
-  display:grid;
+  position: relative;
+  height: 230px;
+  margin-bottom: 20px;
+  display: grid;
   grid-template-rows: max-content;
-  border: 2px solid var(--divider-light-blue-transparent);
-  border-radius:16px;
-  overflow:hidden;
-  width:180px;
-  
+  border: 2px solid var(--main-light-blue-transparent);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 180px;
 }
 
 .info-card__container-img {
   position:relative;
 }
 .photo-carg-img {
-  width:100%;
-  height:100%;
-  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 
 .info-card__title-container {
   position:relative;
-  border-top: 1px solid var(--divider-light-blue-transparent);
-  height:50px;
-  width:inherit;
+  border-top: 1px solid var(--main-light-blue-transparent);
+  height: 50px;
+  width: inherit;
 }
 
 .info-card__title-container:after {
@@ -49,22 +48,22 @@
   width: 100%;
   height: 1px;
   bottom: 16px;
-  background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 1), transparent);
+  background: var(--blue-tiny--divider);
 }
 
 .info-card__title-image {
-  height:100%;
-  width:inherit;
+  height: 100%;
+  width: inherit;
   z-index:-1;
 }
 
 .button-hidden {
   @include flex-center;
   position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  opacity:0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
 .button-hidden:hover {
@@ -75,8 +74,7 @@
 
 .info-card__title {
   text-transform: uppercase;
-  font-weight:6200;
- 
+  font-weight:600;
   color: var(--white);
   position:absolute;
   @include flex-center;

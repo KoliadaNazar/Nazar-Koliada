@@ -7,14 +7,14 @@
 .categories-menu__grid {
 	position:relative;
   display: grid;
-	grid-column-gap:50px;
-  grid-auto-flow:column;
-  grid-auto-columns:max-content;
+	grid-column-gap: 50px;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
 	padding-right: 18px;
 }
 
 .category-small {
-	position:relative;
+	position: relative;
   margin: 6px 6px 16px 6px;
 }
 
@@ -23,23 +23,23 @@
 	content: '';
 	height: calc(100% - 6px);
 	right: -30px;
-	bottom:2px;
+	bottom: 2px;
 	width: 1px; 
-	background: var( --blue-category-divider);
+	background: var(--blue-vertical-category-divider);
 }
 
 .category-small__title {
-	 min-width:50px;
-  min-height:80px;
-	border: 2px solid var(--divider-light-blue-transparent);
+	 min-width: 50px;
+  min-height: 80px;
+	border: 2px solid var(--main-light-blue-transparent);
   border-radius: 8px;
   padding:6px;
-	color:rgba(200, 230, 255, 0.7);
-	font-weight:600;
-	font-size:16px;
-	letter-spacing:1px;
+	color:var(--main-light-blue-transparent);
+	font-weight: 600;
+	font-size: 16px;
+	letter-spacing: 1px;
 	font-style: italic;
- 	text-align:center;
+ 	text-align: center;
  	@include flex-center;
  	transform: rotate(8deg)
 }
@@ -50,17 +50,5 @@
     transition: all 0.3s ease-in-out;
 		border: 2px solid var(--white);
 		transform: rotate(6deg) scale(1.1);
-
   }
 }
-
-
-/* @include laptop-min-width {
-  .categories-menu__grid {
-    scrollbar-width: none; // для Firefox
-
-    &::-webkit-scrollbar {
-      display: none; // для Chrome, Safari
-    }
-  }
-}   отсключение скроллбара*/

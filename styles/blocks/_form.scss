@@ -3,7 +3,7 @@ body.no-scroll {
 }
 
 .modal-overlay {
-  display:block;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -12,14 +12,14 @@ body.no-scroll {
   overflow-y: auto; 
   z-index: 999;
   background: rgba(0, 0, 0, 0.7); 
-  padding:80px 10px;
+  padding: 80px 10px;
   animation: fade .5s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 }
 
 .dialog__inner {
   color: var(--white);
   margin: 0 auto;
-  border: 3px double var(--divider-light-blue-transparent);
+  border: 3px double var(--main-light-blue-transparent);
   border-radius: 16px;
   width: 320px;
   min-height: 700px;
@@ -34,16 +34,16 @@ body.no-scroll {
 
 .dialog-header {
   position: relative;
-  color: var(--divider-light-blue-transparent);
-  display:flex;
+  color: var(--main-light-blue-transparent);
+  display: flex;
   justify-content: space-evenly;
   padding: 20px;
   z-index: 0;
-  border-bottom: 3px double var(--divider-light-blue-transparent);
+  border-bottom: 3px double var(--main-light-blue-transparent);
 }
 
 .button-close {
-  display:grid;
+  display: grid;
   align-items: center;
 }
 
@@ -52,7 +52,7 @@ body.no-scroll {
 }
 
 .dialog-body {
-  position:relative;
+  position: relative;
   display: grid;
   grid-row-gap: 6px;
   padding: 10px;
@@ -75,11 +75,11 @@ body.no-scroll {
 }
 
 input::placeholder {
-  color: var(--divider-light-blue-transparent);
+  color: var(--main-light-blue-transparent);
 }
 
 .form-cell__label {
-  color: var(--divider-light-blue-transparent);
+  color: var(--main-light-blue-transparent);
 }
 
 .form-cell__input {
@@ -112,14 +112,14 @@ input::placeholder {
 }
 
 input[type="radio"] {
-  accent-color: var(--divider-light-blue-transparent);
+  accent-color: var( --main-light-blue-transparent);
   margin: 0;
   width: 20px;
   height: 20px;
 }
 
 .form-cell__select {
-  background: var(--divider-light-blue-transparent);
+  background: var(--main-light-blue-transparent);
   padding-inline-start: 10px;
   border: none;
   outline: none;
@@ -129,7 +129,7 @@ input[type="radio"] {
 
 
 .dialog-footer {
-  border-top: 3px double var(--divider-light-blue-transparent);
+  border-top: 3px double var(--main-light-blue-transparent);
   padding: 20px;
   @include flex-center;
 }

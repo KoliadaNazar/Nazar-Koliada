@@ -18,11 +18,11 @@
 .preloader__circle {
   position: relative;
   animation: border-animation-360 0.7s ease-in-out infinite;
-  position:relative;
-	text-align:center;
-	color: #ffffff;
+  position: relative;
+	text-align: center;
+	color: var(--white);
 	background: var(--button-blue-border-gradient);
-	text-shadow:var(--text-shadow-blue);
+	text-shadow: var(--button-text-shadow-blue);
   box-shadow: var(--button-shadow--hover);
 	z-index:1;
 	width: 100px;
@@ -31,10 +31,10 @@
 }
 
 .preloader__circle--bg {
-  border-radius:inherit;
-	position:absolute;
-	box-shadow:var(--button-background-shadow);
-	inset:2px;
+  border-radius: inherit;
+	position: absolute;
+	box-shadow: var(--button-background-shadow);
+	inset: 2px;
 	z-index: -1;
   background: var(--button-blue-background--hover);
 }
