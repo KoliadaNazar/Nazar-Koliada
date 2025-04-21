@@ -270,11 +270,9 @@ svg * {
 }
 
 :root {
-  --padding-section: padding: 12px 6%;
   --main--bg: background-image:
   linear-gradient(rgba(0, 119, 204, 0.04) 1px, transparent 1px),
   linear-gradient(90deg, rgba(0, 119, 204, 0.04) 1px, transparent 1px);
-  --main-theme-dark: black;
   --white: rgb(255, 255, 255);
   --border-radius: 30px;
   --border-radius-small: 30px;
@@ -766,11 +764,16 @@ input[type=radio] {
 }
 
 .card__grid-item {
-  height: 220px;
+  height: 200px;
   border-left: 3px double var(--divider-light-blue-transparent);
   border-top: 3px double var(--divider-light-blue-transparent);
   border-radius: 8px;
   margin: 8px 0 20px 0;
+}
+@media (min-width: 1024px) {
+  .card__grid-item {
+    height: 220px;
+  }
 }
 
 .card__grid-item:hover {
@@ -1262,6 +1265,11 @@ input[type=radio] {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .slider__photo-img {
+    width: 210px;
+  }
 }
 @media (min-width: 1281px) {
   .slider__photo-img {

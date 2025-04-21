@@ -41,6 +41,11 @@
 	width: 180px;
 	height:300px;
 	object-fit:cover;
+
+	@include tablet-min-width {
+		width: 210px;
+	}
+
 	@include desctop-min-width {
 		width: 210px;
 		height:350px;

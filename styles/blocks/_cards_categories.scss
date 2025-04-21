@@ -15,11 +15,16 @@
 }
 
 .card__grid-item {
-  height: 220px;
+  height: 200px;
   border-left: 3px double var(--divider-light-blue-transparent);
   border-top: 3px double var(--divider-light-blue-transparent);
   border-radius: 8px;
   margin: 8px 0 20px 0;
+
+    @include laptop-min-width {
+      height: 220px;
+    }
+    
 }
 
 .card__grid-item:hover {
