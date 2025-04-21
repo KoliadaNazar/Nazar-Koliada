@@ -113,12 +113,13 @@ background-position:
 
 
 body {
-    font-family: var(--font--family-base);
-    font-weight:400;
-    font-size:14px;
-    color: var(--main-theme-dark);
-    @include background-universe;
-    letter-spacing: 1.4px; // DELETE IT LATER !!!!
+  user-select: none;
+  font-family: var(--font--family-base);
+  font-weight:400;
+  font-size:14px;
+  color: var(--main-theme-dark);
+  @include background-universe;
+  letter-spacing: 1.4px; // DELETE IT LATER !!!!
 }
 
 a, button , input, textarea, svg * {
@@ -161,20 +162,21 @@ a, button {
 
 ::-webkit-scrollbar {
   height: 6px; /*высот адля горизонтального скролбара*/
+  width: 0;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--divider-light-blue-transparent);
   border-radius: 4px;
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
 
-
 body::-webkit-scrollbar {
   display: none;  
-  -ms-overflow-style: none;            /* Chrome, Safari, Opera */
+  -ms-overflow-style: none;     /* Chrome, Safari, Opera */
 }
 /*@include laptop-min-width {
   .categories-menu__grid {
