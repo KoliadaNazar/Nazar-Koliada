@@ -1,4 +1,5 @@
 .button {
+	padding: 4px 16px;
 	text-transform: uppercase;
 	position: relative;
 	text-align: center;
@@ -7,11 +8,11 @@
 	text-shadow: var(--button-text-shadow-blue);
 	z-index: 1;
 	white-space: nowrap;
-	padding: 5px 20px;
+	@include flex-center;
 }
 
 .button-background {
-	@include flex-center;
+	
 	border-radius: inherit;
 	position: absolute;
 	box-shadow: var(--button-background-shadow);
@@ -28,6 +29,7 @@
 }
 
 .button-small-medium {
+	font-size:14px;
 	border-radius: 30px;
 	min-height: 32px;
 	min-width: 100px;
@@ -35,20 +37,22 @@
 	animation-delay: 3s; 
 	animation-fill-mode: none;
 		@include tablet-min-width {
-			min-height: 36px;
+			min-height: 34px;
 			min-width: 120px;
 		}
 }
 
 .button-medium-large {
+	font-size:14px;
 	animation-delay: 2s;
 	animation-fill-mode: none;
 	border-radius: 40px;
 	min-height: 36px;
-	min-width: 120px;
+	min-width: 130px;
 		@include tablet-min-width {
 			min-height: 40px;
 			min-width: 160px;
+			font-size:16px;
 		}
 	
 }
