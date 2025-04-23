@@ -4,12 +4,10 @@ body {
      -moz-user-select: none;
           user-select: none;
   font-family: var(--font--family-base);
-  font-weight: 400;
-  font-size: 14px;
   color: var(--main-theme-dark);
   background: rgba(0, 18, 36, 0.9);
   box-shadow: inset 0 0 100px rgba(0, 77, 153, 0.6);
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
 }
 
 a, button, input, textarea, svg * {
@@ -713,6 +711,7 @@ input[type=radio] {
 }
 
 .navigation__list {
+  font-size: 12px;
   color: var(--white);
   row-gap: 14px;
   padding: 10px 20px;
@@ -931,12 +930,8 @@ input[type=radio] {
 
 .info-card__container-img {
   position: relative;
-}
-
-.photo-carg-img {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  width: 180px;
+  height: 180px;
 }
 
 .info-card__title-container {
@@ -1512,7 +1507,7 @@ header {
 .container,
 .section {
   position: relative;
-  padding-left: 18px;
+  padding-inline-start: 18px;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -1520,7 +1515,7 @@ header {
   .section {
     max-width: 1600px;
     margin: 0 auto;
-    padding-left: 50px;
+    padding-inline-start: 50px;
   }
 }
 

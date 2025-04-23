@@ -27,12 +27,12 @@ header {
 .container,
 .section {
   position:relative;
-  padding-left:18px;
+  padding-inline-start:18px;
   width: 100%;
   @include laptop-min-width {
     max-width: 1600px;
     margin:0 auto;
-    padding-left:50px;
+    padding-inline-start:50px;
     }
   }
 
