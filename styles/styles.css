@@ -802,7 +802,8 @@ input[type=radio] {
   align-items: center;
 }
 
-.cards-header__link {
+.cards-header__link,
+.cards-header__title {
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;

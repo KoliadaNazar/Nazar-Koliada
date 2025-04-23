@@ -43,14 +43,14 @@
 .cards-header {
   margin: 0 auto;
   width: 100%;
-
   padding-inline-end:16px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
-.cards-header__link {
+.cards-header__link,
+.cards-header__title {
   font-size: 16px;
   font-weight: 500;
   display: inline-flex;
