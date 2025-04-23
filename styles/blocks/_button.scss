@@ -11,6 +11,7 @@
 }
 
 .button-background {
+	@include flex-center;
 	border-radius: inherit;
 	position: absolute;
 	box-shadow: var(--button-background-shadow);

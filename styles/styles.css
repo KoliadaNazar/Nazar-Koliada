@@ -1321,6 +1321,9 @@ input[type=radio] {
 }
 
 .button-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: inherit;
   position: absolute;
   box-shadow: var(--button-background-shadow);
