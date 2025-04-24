@@ -778,7 +778,7 @@ input[type=radio] {
   }
 }
 
-.card__grid-link:hover {
+.cards-grid__link:hover {
   transform: translate(3%, -1%) scale(1.03);
 }
 
@@ -938,7 +938,7 @@ input[type=radio] {
   border-top: 1px solid var(--main-light-blue-transparent);
   height: 50px;
   width: inherit;
-  background-image: url("/images/info_card_bg2.png");
+  background-image: url("../images/info_card_bg.png");
   background-size: 100% 100%;
   text-transform: uppercase;
   font-weight: 600;
