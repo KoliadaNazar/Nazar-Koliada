@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.main-wrapper {
+.main {
   @include flex-column;
   flex-grow: 1;
   padding-top: 60px;
@@ -37,6 +37,7 @@ header {
   }
 
 .banner__container {
+  position:relative;
   width:100%;
   @include laptop-min-width {
     padding: 14px 50px 0 50px;
@@ -45,3 +46,14 @@ header {
 	}
 }
 
+.banner--border {
+	border-top: 1px solid var(--main-light-blue-transparent);
+	border-bottom: 1px solid var(--main-light-blue-transparent);
+  overflow: hidden;
+
+		@include laptop-min-width {
+			border: 2px solid var(--main-light-blue-transparent);
+			border-radius: 10px; 
+			
+  }
+}  

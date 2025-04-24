@@ -1,7 +1,9 @@
+
 .slide {
 	display: none;
 	height: 300px;
 	width: 100%;
+	z-index: -1;
 	position:relative;
 		@include desctop-min-width {
 			height: 350px;
@@ -78,16 +80,22 @@
 	position:absolute;
 	width:34px;
 	height:auto;
-	top:-150px;
-	left:20px;
-	z-index:1;
+	top:50%;
+	left:12px;
+	z-index: 1;
+		@include laptop-min-width {
+			left:64px;
+		}
 }
 .arrow-next{
 	position:absolute;
 	width:34px;
 	height:auto;
-	top:-150px;
-	right:20px;
+	top:50%;
+	right:12px;
 	z-index:1;
+	@include laptop-min-width {
+		right:64px;
+	}
 }
 

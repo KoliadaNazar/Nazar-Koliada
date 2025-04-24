@@ -51,13 +51,13 @@
 
 .nav-control {
 	@include flex-center;
+	transition: transform 0.2s ease;
 }
 
 .nav-control
  {
 	@include hover{
 		transform: scale(1.05);
-		transition: transform 0.4s ease;
 	}
 	
 }

@@ -112,7 +112,6 @@ background-position:
 body {
   user-select: none;
   font-family: var(--font--family-base);
-  color: var(--main-theme-dark);
   @include background-universe;
   letter-spacing: 1.1px; // DELETE IT LATER !!!!
 }
@@ -122,11 +121,11 @@ a, button , input, textarea, svg * {
 }
 
 a, button {
-    transition: transform .3s ease;
+    transition: transform 0.2s ease;
 }
 
 button:active {
-    transform: scale(1.09);
+    transform: scale(1.06);
 }
 
 a {
