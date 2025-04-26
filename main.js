@@ -22,7 +22,7 @@ function initSlider() {
     function startAutoSlide() {
       autoSlideInterval = setInterval(() => {
         showSlide(slideIndex + 1);
-      }, 4000);
+      }, 94000);
     }
 
     function handleManualChange(direction) {
@@ -30,7 +30,7 @@ function initSlider() {
       showSlide(slideIndex + direction);
       autoSlideInterval = setInterval(() => {
         showSlide(slideIndex + 1);
-      }, 4000);
+      }, 94000);
     }
 
     prevBtn.addEventListener('click', () => handleManualChange(-1));
