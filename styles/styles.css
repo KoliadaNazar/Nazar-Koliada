@@ -1310,6 +1310,7 @@ input[type=radio] {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .button-background {
@@ -1366,9 +1367,6 @@ input[type=radio] {
   animation-fill-mode: none;
 }
 
-.button {
-  transition: box-shadow 0.2s ease, background-color 0.2s ease;
-}
 @media (hover: hover) {
   .button:hover {
     box-shadow: var(--button-shadow--hover);
