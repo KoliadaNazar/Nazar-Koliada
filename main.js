@@ -43,13 +43,13 @@ function initSlider() {
   // sidebar below---
   document.addEventListener('DOMContentLoaded', initSlider); 
   const toggleMenu = document.querySelector('.sidebar');
-  const navControl = document.querySelector('.nav-control');
+  const navControl = document.querySelector('.header__nav-control');
   
   navControl.addEventListener('click', () => {
     toggleMenu.classList.toggle('sidebar--open');
   
-    const menuIcon = document.querySelector('.menu-icon');
-    const iconClose = document.querySelector('.menu-icon--close');
+    const menuIcon = document.querySelector('.header__burger-icon');
+    const iconClose = document.querySelector('.header__burger-close');
   
     menuIcon.classList.toggle('burger-icon--hidden');
     iconClose.classList.toggle('burger-icon--hidden'); 
@@ -57,8 +57,8 @@ function initSlider() {
   
 
   //light bulb below---
-  const Switcher = document.querySelector('.light__switcher');
-  const lightBulb = document.querySelector('.light-bulb__icon');
+  const Switcher = document.querySelector('.banner__light-switcher');
+  const lightBulb = document.querySelector('.banner__light-bulb-icon');
 
   Switcher.addEventListener('click', () =>
     { lightBulb.classList.toggle('light-bulb__active');
@@ -74,7 +74,7 @@ function initSlider() {
   )
 
 
-// --------------Rotate arrow
+// --------------Footer
 
  //  для всех стрелок
 document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => {
@@ -89,7 +89,7 @@ document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => 
     } 
     else if (this.closest('.footer__grid-item')) {
       // Для футера
-      const footerMenu = this.closest('.footer__grid-item').querySelector('.navigation__list');
+      const footerMenu = this.closest('.footer__grid-item').querySelector('.footer__nav-list');
       if (footerMenu) footerMenu.classList.toggle('navigation__list--active');
     }
 

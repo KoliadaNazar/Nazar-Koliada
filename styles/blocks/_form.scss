@@ -3,7 +3,6 @@ body.no-scroll {
 }
 
 .modal-overlay {
-  display: block;
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +15,7 @@ body.no-scroll {
   animation: fade .5s cubic-bezier(0.25, 0.1, 0.25, 1) both;
 }
 
-.dialog__inner {
+.dialog {
   color: var(--white);
   margin: 0 auto;
   border: 3px double var(--main-light-blue-transparent);
@@ -32,13 +31,11 @@ body.no-scroll {
   
 }   
 
-.dialog-header {
-  position: relative;
+.dialog__header {
   color: var(--main-light-blue-transparent);
   display: flex;
   justify-content: space-evenly;
   padding: 20px;
-  z-index: 0;
   border-bottom: 3px double var(--main-light-blue-transparent);
 }
 
@@ -51,7 +48,7 @@ body.no-scroll {
   font-size: 26px;
 }
 
-.dialog-body {
+.dialog__body {
   position: relative;
   display: grid;
   grid-row-gap: 6px;
@@ -63,13 +60,13 @@ body.no-scroll {
     }
 }
 
-.dialog-separator {
+.dialog__separator {
   width: 100%;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(200, 230, 255, 0.7), transparent);
 }
 
-.form-cell {
+.dialog__body-cell {
   display: grid;
   grid-row-gap: 6px;
 }
@@ -78,11 +75,11 @@ input::placeholder {
   color: var(--main-light-blue-transparent);
 }
 
-.form-cell__label {
+.dialog__body-label {
   color: var(--main-light-blue-transparent);
 }
 
-.form-cell__input {
+.dialog__body-input {
   outline: none;
   padding-inline-start: 20px;
   padding-inline-end: 20px;
@@ -98,13 +95,13 @@ input::placeholder {
   
 }
 
-.form-radio-group {
+.dialog__body-radio-group {
   padding-inline-start: 10px;
   @include flex-column;
   gap: 8px;
 }
 
-.form-radio__item {
+.dialog__body-radio-item {
   align-items: center;
   display: grid;
   grid-template-columns: 80px 40px;
@@ -118,7 +115,7 @@ input[type="radio"] {
   height: 20px;
 }
 
-.form-cell__select {
+.dialog__body-select {
   background: var(--main-light-blue-transparent);
   padding-inline-start: 10px;
   border: none;

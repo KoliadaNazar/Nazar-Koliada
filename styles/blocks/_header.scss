@@ -28,19 +28,19 @@
 		}		
 }
 
-.auth__buttons {
+.header__auth-buttons {
 	display: flex;
 	gap: 12px;
 	position: relative;
 }
 
-.header__logo {
+.header__logo-link {
 	position: absolute;
 	left: 78px;
 	top: 10px;
 }
 
-.header__logo:before {
+.header__logo-link:before {
 	position: absolute;
 	content: '';
 	height: calc(100% - 6px);
@@ -49,19 +49,20 @@
 	background: var(--blue-vertical-category-divider);
 }
 
-.nav-control {
+.header__nav-control {
 	@include flex-center;
 	transition: transform 0.2s ease;
 }
 
-.nav-control
+.header__nav-control
  {
 	@include hover{
 		transform: scale(1.05);
 	}
 	
 }
-.nav-control:active {
+
+.header__nav-control:active {
 	transform: scale(1.1);
 }
 

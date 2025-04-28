@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head> 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,15 +19,15 @@
 		<div class="page-layout">
 			<header class="header">
 				<div class="header__inner">
-					<button class="nav-control" type="button" aria-label="Open and close sidebar">
-							<svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+					<button class="header__nav-control" type="button" aria-label="Open and close sidebar">
+							<svg class="header__burger-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
 								<path fill="currentColor" d="M3 6h10v2H3zm0 10h10v2H3zm0-5h12v2H3zm13-4l-1.42 1.39L18.14 12l-3.56 3.61L16 17l5-5z"/>
 							</svg>
-							<svg class="menu-icon--close burger-icon--hidden" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
+							<svg class="header__burger-close burger-icon--hidden" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24">
 								<path fill="currentColor" d="M3 18v-2h13v2zm16.6-1l-5-5l5-5L21 8.4L17.4 12l3.6 3.6zM3 13v-2h10v2zm0-5V6h13v2z"/>
 							</svg>
 					</button>
-						<a class="header__logo eader__logo-link " href="https://koliadanazar.github.io/Nazar-Koliada/#">
+						<a class="header__logo-link " href="https://koliadanazar.github.io/Nazar-Koliada/#">
 							<svg width="40" height="40" viewBox="19 9 45 45" xmlns="http://www.w3.org/2000/svg">
 							<defs>
 								<linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -41,7 +40,7 @@
 							<text x="27.5" y="37.5" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="url(#grad)">NK</text>
 							</svg>
 						</a>
-					<div class="auth__buttons">
+					<div class="header__auth-buttons">
 						<button class="button button-small-medium" type="button">Log in
 							<span class="button-background button-primary"></span>
 						</button>
@@ -146,7 +145,7 @@
 						<section class="main-slider banner__container">
 							<div class="slide  _active _fade banner--border">
 								<div class="slide__content">
-									<h1 class="title-text">Welcome <br> to my personal <br> web page!</h1>
+									<h1 class="slide__text">Welcome <br> to my personal <br> web page!</h1>
 									<a href="#contact-me" class="button button-medium-large">Contact Me
 										<span class="button-background button-secondary "></span>
 									</a>
@@ -174,9 +173,7 @@
 									</picture>
 								</div>
 								<div class="slide__content">
-									<div class="banner__text">
-										<h1 class="title-text">My name  is <br> Nazar Koliada <br> I'm front-end developer</h1>
-									</div>
+										<h1 class="slide__text">My name  is <br> Nazar Koliada <br> I'm front-end developer</h1>
 										<a href="#contact-me" class="button button-medium-large button--animation">Contact Me
 											<span class="button-background button-secondary "></span>
 										</a>
@@ -191,9 +188,7 @@
 									</picture>
 								</div>
 								<div class="slide__content">
-									<div class="banner__text">
-										<h1 class="title-text">The mountains <br> are so <br> Ibeautiful</h1>
-									</div>
+										<h1 class="slide__text">The mountains <br> are so <br> Ibeautiful</h1>
 										<a href="#contact-me" class="button button-medium-large"> Contact Me
 											<span class="button-background button-secondary "></span>
 										</a>
@@ -212,38 +207,35 @@
 								</svg>
 							</button>
 						</section>
-						<div class="categories-menu--small section">
-							<div class="categories-menu__inner ">
-								<div class="categories-menu__grid">
-									<a href="#" class="category-small">
-										<span class="category-small__title"> Css</span>
+						<div class="small-menu section">
+							<div class="small-menu__inner ">
+								<div class="small-menu__grid">
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> Css</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title">Html</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title">Html</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> Js</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> Js</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title">img</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title">img</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> cms</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> cms</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> core</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> core</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> Back<br>end</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> Back<br>end</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> Dev<br>t-ls</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> git</span>
 									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> git</span>
-									</a>
-									<a href="#" class="category-small">
-										<span class="category-small__title"> Dom</span>
+									<a href="#" class="small-menu__grid-item">
+										<span class="small-menu__title"> Dom</span>
 									</a>
 								</div>
 							</div>
@@ -292,46 +284,40 @@
 						</section>
 						<section class="banner banner__container">
 							<div class="banner__inner banner--border">
-								<div class="banner__content">
-									<a href="" class="banner__features-link">
-										<h2 class="banner__heading">
-											Learn about some features in our 'How-To Guides' section:
-										</h2>
-									</a>
+								<a class="banner__content">
+									<h2 class="banner__heading">Learn about some features in our 'How-To Guides' section:</h2>
 									<ul class="banner__features-list">
 										<li class="banner__feature-item">How to center div in CSS</li>
-										<li class="banner__feature-ite">How to use Flexbox for layout</li>
-										<li class="banner__feature-ite"> How to add hover effect?</li>
-										<li class="banner__feature-ite"> How to make a smooth scroll</li>
-										<li class="banner__feature-ite"> How to overlay one div over another</li>
-										<li class="banner__feature-ite"> How to position an element absolute</li>
-										<li class="banner__feature-ite"> How to position an element absolute</li>
-										<li class="banner__feature-ite">How to make a responsive layout with CSS Grid</li>
+										<li class="banner__feature-item">How to use Flexbox for layout</li>
+										<li class="banner__feature-item"> How to add hover effect?</li>
+										<li class="banner__feature-item"> How to make a smooth scroll</li>
+										<li class="banner__feature-item"> How to overlay one div over another</li>
+										<li class="banner__feature-item"> How to position an element absolute</li>
+										<li class="banner__feature-item"> How to position an element absolute</li>
+										<li class="banner__feature-item">How to make a responsive layout with CSS Grid</li>
 									</ul>
-								</div>
+								</a>
 								<div class="banner__actions"> 
 									<button class="button button-medium-large button--animation" type="button"> Lear now!
 										<span class="button-background button-primary"></span>
 									</button>
-									<div class="light-bulb__actions">
-										<div class="light-bulb__container">
-											<svg class="light-bulb__icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path fill="currentColor" d="M12.754 2.305a.75.75 0 0 0-1.5 0v1.48a.75.75 0 0 0 1.5 0zm5.111 7.99a5.9 5.9 0 0 0-1.11-2.22a6 6 0 0 0-1.91-1.59a6.2 6.2 0 0 0-2.38-.69a6 6 0 0 0-2.46.33a6 6 0 0 0-2.13 1.29a6.2 6.2 0 0 0-1.43 2a6 6 0 0 0-.49 2.43a6.09 6.09 0 0 0 2.41 5l.35.33c.3.31.3.31.29 1v.32a1.6 1.6 0 0 0 .1.65c.07.222.194.425.36.59q.114.117.25.21v1a1.38 1.38 0 0 0 1.26 1.5h2a1.39 1.39 0 0 0 1.27-1.5v-1a1.6 1.6 0 0 0 .25-.21c.157-.166.277-.364.35-.58a1.7 1.7 0 0 0 .1-.66v-.37c0-.55 0-.55.31-.9l.38-.35a6.17 6.17 0 0 0 2.33-4.07a5.9 5.9 0 0 0-.1-2.51m-5.07 10.63h-1.58v-.63h1.58zm-.79-10.56a1.23 1.23 0 0 0-1.23 1.23a1 1 0 1 1-2 0a3.21 3.21 0 0 1 3.23-3.23a1 1 0 0 1 0 2m9.16 2.5h-1.83a.75.75 0 0 1 0-1.5h1.83a.75.75 0 1 1 0 1.5m-3.68-6.01a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06l1.3-1.3a.75.75 0 0 1 1.06 1.06l-1.3 1.3a.73.73 0 0 1-.53.22m2.3 12.44a.8.8 0 0 1-.53-.22l-1.3-1.3a.75.75 0 0 1 .242-1.226a.74.74 0 0 1 .818.166l1.3 1.3a.74.74 0 0 1 0 1.06a.75.75 0 0 1-.53.22M6.535 6.855a.75.75 0 0 1-.53-.22l-1.3-1.3a.753.753 0 1 1 1.07-1.06l1.29 1.3a.75.75 0 0 1-.53 1.28m-2.29 12.44a.7.7 0 0 1-.53-.22a.75.75 0 0 1 0-1.06l1.3-1.3a.75.75 0 0 1 1.06 1.06l-1.29 1.31a.8.8 0 0 1-.54.21m.42-6.43h-1.83a.75.75 0 1 1 0-1.5h1.83a.75.75 0 1 1 0 1.5"/>
+									<div class="banner__light-bulb">
+											<svg class="banner__light-bulb-icon" xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24"><path fill="currentColor" d="M12.754 2.305a.75.75 0 0 0-1.5 0v1.48a.75.75 0 0 0 1.5 0zm5.111 7.99a5.9 5.9 0 0 0-1.11-2.22a6 6 0 0 0-1.91-1.59a6.2 6.2 0 0 0-2.38-.69a6 6 0 0 0-2.46.33a6 6 0 0 0-2.13 1.29a6.2 6.2 0 0 0-1.43 2a6 6 0 0 0-.49 2.43a6.09 6.09 0 0 0 2.41 5l.35.33c.3.31.3.31.29 1v.32a1.6 1.6 0 0 0 .1.65c.07.222.194.425.36.59q.114.117.25.21v1a1.38 1.38 0 0 0 1.26 1.5h2a1.39 1.39 0 0 0 1.27-1.5v-1a1.6 1.6 0 0 0 .25-.21c.157-.166.277-.364.35-.58a1.7 1.7 0 0 0 .1-.66v-.37c0-.55 0-.55.31-.9l.38-.35a6.17 6.17 0 0 0 2.33-4.07a5.9 5.9 0 0 0-.1-2.51m-5.07 10.63h-1.58v-.63h1.58zm-.79-10.56a1.23 1.23 0 0 0-1.23 1.23a1 1 0 1 1-2 0a3.21 3.21 0 0 1 3.23-3.23a1 1 0 0 1 0 2m9.16 2.5h-1.83a.75.75 0 0 1 0-1.5h1.83a.75.75 0 1 1 0 1.5m-3.68-6.01a.74.74 0 0 1-.53-.22a.75.75 0 0 1 0-1.06l1.3-1.3a.75.75 0 0 1 1.06 1.06l-1.3 1.3a.73.73 0 0 1-.53.22m2.3 12.44a.8.8 0 0 1-.53-.22l-1.3-1.3a.75.75 0 0 1 .242-1.226a.74.74 0 0 1 .818.166l1.3 1.3a.74.74 0 0 1 0 1.06a.75.75 0 0 1-.53.22M6.535 6.855a.75.75 0 0 1-.53-.22l-1.3-1.3a.753.753 0 1 1 1.07-1.06l1.29 1.3a.75.75 0 0 1-.53 1.28m-2.29 12.44a.7.7 0 0 1-.53-.22a.75.75 0 0 1 0-1.06l1.3-1.3a.75.75 0 0 1 1.06 1.06l-1.29 1.31a.8.8 0 0 1-.54.21m.42-6.43h-1.83a.75.75 0 1 1 0-1.5h1.83a.75.75 0 1 1 0 1.5"/>
 											</svg>
-										</div>
-										<button class="light__switcher" type="button"  aria-label="turn off and turn no the light">
+										<button class="banner__light-switcher" type="button"  aria-label="turn off and turn no the light">
 											<svg class="switcher-on " xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24">
 													<circle cx="17" cy="12" r="3" fill="currentColor" fill-opacity="0" opacity="0">
-														<animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.15s" values="0;1"/>
-														<animate fill="freeze" attributeName="opacity" begin="0.6s" dur="0.2s" values="0;1"/>
-														</circle><path fill="none" stroke="currentColor" stroke-dasharray="56" stroke-dashoffset="56"
-															stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7h5c2.76 0 5 2.24
-															5 5c0 2.76 -2.24 5 -5 5h-10c-2.76 0 -5 -2.24 -5 -5c0 -2.76 2.24 -5 5 -5Z"><animate fill="freeze"
-															attributeName="stroke-dashoffset" dur="0.6s" values="56;0"/></path>
+													<animate fill="freeze" attributeName="fill-opacity" begin="0.6s" dur="0.15s" values="0;1"/>
+													<animate fill="freeze" attributeName="opacity" begin="0.6s" dur="0.2s" values="0;1"/>
+													</circle><path fill="none" stroke="currentColor" stroke-dasharray="56" stroke-dashoffset="56"
+													stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7h5c2.76 0 5 2.24
+													5 5c0 2.76 -2.24 5 -5 5h-10c-2.76 0 -5 -2.24 -5 -5c0 -2.76 2.24 -5 5 -5Z"><animate fill="freeze"
+													attributeName="stroke-dashoffset" dur="0.6s" values="56;0"/></path>
 											</svg>
 											<svg class="switcher-off switcher-icon__hidden" xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24">
 													<path fill="currentColor" d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69
-														6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4
-														4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"/>
+													6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4
+													4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3"/>
 											</svg>
 										</button>
 									</div>
@@ -476,27 +462,22 @@
 						</section>
 						<section class="banner banner__container">
 							<div class="banner__inner banner--border">
-								<div class="banner__content">
-									<a href="" class="banner__features-link">
-										<h3 class="banner__heading">
-											Learn about some features in our 'How-To Guides' section:
-										</h3>
-									</a>
+								<a class="banner__content">
+									<h2 class="banner__heading">Learn about some features in our 'How-To Guides' section:</h2>
 									<ul class="banner__features-list">
 										<li class="banner__feature-item">How to center div in CSS</li>
-										<li class="banner__feature-ite">How to use Flexbox for layout</li>
-										<li class="banner__feature-ite"> How to add hover effect?</li>
-										<li class="banner__feature-ite"> How to make a smooth scroll</li>
-										<li class="banner__feature-ite"> How to overlay one div over another</li>
-										<li class="banner__feature-ite"> How to position an element absolute</li>
-										<li class="banner__feature-ite"> How to position an element absolute</li>
-										<li class="banner__feature-ite">How to make a responsive layout with CSS Grid</li>
+										<li class="banner__feature-item">How to use Flexbox for layout</li>
+										<li class="banner__feature-item"> How to add hover effect?</li>
+										<li class="banner__feature-item"> How to make a smooth scroll</li>
+										<li class="banner__feature-item"> How to overlay one div over another</li>
+										<li class="banner__feature-item"> How to position an element absolute</li>
+										<li class="banner__feature-item"> How to position an element absolute</li>
+										<li class="banner__feature-item">How to make a responsive layout with CSS Grid</li>
 									</ul>
-								</div>
-								<button class="button button-medium-large button--animation" type="button"> Learn now!
-									<span class="button-background button-primary"></span>
-								</button>
-							
+								</a>
+									<button class="button button-medium-large button--animation" type="button"> Lear now!
+										<span class="button-background button-primary"></span>
+									</button>
 							</div>
 						</section>
 					</div>
@@ -504,78 +485,78 @@
 			<footer class="footer">
 					<div class="footer__grid-container">
 						<div class="footer__grid-item">
-							<div class="navigation__title">
+							<div class="footer__title">
 								Title 1
 								<svg class="arrow-icon arrow-icon-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd">
 									<path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.293 6.293a1 1 0 0 1 1.414 0L12 10.586l4.293-4.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414m0 6a1 1 0 0 1 1.414 0L12 16.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414"/></g>
 								</svg>
 							</div>
-							<ul class="navigation__list">
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
 							</ul>
 						</div>
 						<div class="footer__grid-item">
-							<div class="navigation__title">
+							<div class="footer__title">
 								Title 1
 								<svg class="arrow-icon arrow-icon-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd">
 									<path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.293 6.293a1 1 0 0 1 1.414 0L12 10.586l4.293-4.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414m0 6a1 1 0 0 1 1.414 0L12 16.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414"/></g>
 								</svg>
 							</div>
-							<ul class="navigation__list">
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
 							</ul>
 						</div>	
 						<div class="footer__grid-item">
-							<div class="navigation__title">
+							<div class="footer__title">
 								Title 1
 								<svg class="arrow-icon arrow-icon-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd">
 									<path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.293 6.293a1 1 0 0 1 1.414 0L12 10.586l4.293-4.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414m0 6a1 1 0 0 1 1.414 0L12 16.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414"/></g>
 								</svg>
 							</div>
-							<ul class="navigation__list">
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
 							</ul>
 						</div>		
 						<div class="footer__grid-item">
-							<div class="navigation__title">
+							<div class="footer__title">
 								Title 1
 								<svg class="arrow-icon arrow-icon-down" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd">
 									<path d="M24 0v24H0V0zM12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M6.293 6.293a1 1 0 0 1 1.414 0L12 10.586l4.293-4.293a1 1 0 1 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414m0 6a1 1 0 0 1 1.414 0L12 16.586l4.293-4.293a1 1 0 0 1 1.414 1.414l-5 5a1 1 0 0 1-1.414 0l-5-5a1 1 0 0 1 0-1.414"/></g>
 								</svg>
 							</div>
-							<ul class="navigation__list">
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+							<ul class="footer__nav-list">
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
-								<li class="navigation__item">
-									<a href="#" class="navigation__link">link 1</a>
+								<li class="footer__nav-item">
+									<a href="#" class="footer__nav-link">link 1</a>
 								</li>
 							</ul>
 						</div>
@@ -604,77 +585,75 @@
 			</footer> <!--fooger-->
 		</div>
 		<div class="modal-overlay" id="overlay">
-				<div class="dialog">
-					<div class="dialog__inner">
-						<div class="dialog-header">
-							<h1 class="dialog__heading">Registration </h1>
-							<button class="button-close" id="closeForm" type="button"  aria-label="close form">
-								<svg class="button-close__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 16.74L7.76 12L3 7.26L7.26 3L12 7.76L16.74 3L21 7.26L16.24 12L21 16.74L16.74 21L12 16.24L7.26 21zm9-3.33l4.74 4.75l1.42-1.42L13.41 12l4.75-4.74l-1.42-1.42L12 10.59L7.26 5.84L5.84 7.26L10.59 12l-4.75 4.74l1.42 1.42z"/>
-								</svg>
-							</button>
-						</div>
-						<div class="dialog-body">
-								<div class="form-cell">
-									<label for="first-name" class="form-cell__label">First name</label>
-									<input id="first-name" placeholder="Your Name" type="text" class="form-cell__input">
-								</div> 
-								<div class="form-cell">
-									<label for="last-name" class="form-cell__label">Last name</label>
-									<input id="last-name" placeholder="Your Last Name" type="text" class="form-cell__input">
-								</div> 
-								<div class="form-cell">
-									<label for="date-birth" class="form-cell__label">Date of your birht</label>
-									<input id="date-birth" type="date" class="form-cell__input">
-								</div>
-								<div class="dialog-separator"><!--Separator--></div>
-								<div class="form-cell">
-									<div class="form-cell__label">Gender</div>
-									<div class="form-radio-group">
-										<div class="form-radio__item">
-											<label for="gender-male" class="form-radio__label">Male</label>
-											<input name="radio-btn" id="gender-male" class="form-radio__input" type="radio">
-										</div>
-										<div class="form-radio__item">
-											<label for="gender-female" class="form-radio__label">Female</label>
-											<input name="radio-btn" id="gender-female" class="form-radio__input" type="radio">
-										</div>
-										<div class="form-radio__item">
-											<label for="gender-other" class="form-radio__label">Other</label>
-											<input name="radio-btn" id="gender-other" class="form-radio__input" type="radio">
-										</div>
-									</div>
-								</div>
-								<div class="form-cell">
-									<label for="Region" class="form-cell__label">Region</label>
-									<select id="Region" class="form-cell__select">
-										<option value="EU">Europe</option>
-										<option value="AS">Asia</option>
-										<option value="NA">North America</option>
-										<option value="SA">South America</option>
-										<option value="AF">Africa </option>
-										<option value="AU">Australia</option>
-									</select>
-								</div>
-								<div class="dialog-separator"><!--Separator--></div>
-								<div class="form-cell">
-									<label for="phone" class="form-cell__label">Phone number</label>
-									<input id="phone" type="tel" class="form-cell__input" placeholder="+">
-								</div>
-								<div class="form-cell">
-									<label for="email" class="form-cell__label">E-mail</label>
-									<input id="email" type="email" class="form-cell__input" placeholder="Your e-mail" >
-								</div>
-								<div class="form-cell">
-									<label for="register-password" class="form-cell__label">Password</label>
-									<input id="register-password" type="password" class="form-cell__input" placeholder="Create password" >
-								</div>
-						</div>
-						<div class="dialog-footer">
-							<button class="button button-medium-large" type="submit">Join Now
-								<span class="button-background button-secondary"></span>
-							</button>
-						</div>
+			<div class="dialog">
+				<div class="dialog__header">
+					<h1 class="dialog__heading">Registration </h1>
+					<button class="button-close" id="closeForm" type="button"  aria-label="close form">
+						<svg class="button-close__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M3 16.74L7.76 12L3 7.26L7.26 3L12 7.76L16.74 3L21 7.26L16.24 12L21 16.74L16.74 21L12 16.24L7.26 21zm9-3.33l4.74 4.75l1.42-1.42L13.41 12l4.75-4.74l-1.42-1.42L12 10.59L7.26 5.84L5.84 7.26L10.59 12l-4.75 4.74l1.42 1.42z"/>
+						</svg>
+					</button>
+				</div>
+				<div class="dialog__body">
+					<div class="dialog__body-cell">
+						<label for="first-name" class="dialog__body-label">First name</label>
+						<input id="first-name" placeholder="Your Name" type="text" class="dialog__body-input">
+					</div> 
+					<div class="dialog__body-cell">
+						<label for="last-name" class="dialog__body-label">Last name</label>
+						<input id="last-name" placeholder="Your Last Name" type="text" class="dialog__body-input">
+					</div> 
+					<div class="dialog__body-cell">
+						<label for="date-birth" class="dialog__body-label">Date of your birht</label>
+						<input id="date-birth" type="date" class="dialog__body-input">
 					</div>
+					<div class="dialog__separator"><!--Separator--></div>
+					<div class="dialog__body-cell">
+						<div class="dialog__body-label">Gender</div>
+						<div class="dialog__body-radio-group">
+							<div class="dialog__body-radio-item">
+								<label for="gender-male" class="dialog__body-ragio-label">Male</label>
+								<input name="radio-btn" id="gender-male" class="dialog__body-ragio-input" type="radio">
+							</div>
+							<div class="dialog__body-radio-item">
+								<label for="gender-female" class="dialog__body-ragio-label">Female</label>
+								<input name="radio-btn" id="gender-female" class="dialog__body-ragio-input" type="radio">
+							</div>
+							<div class="dialog__body-radio-item">
+								<label for="gender-other" class="dialog__body-ragio-label">Other</label>
+								<input name="radio-btn" id="gender-other" class="dialog__body-ragio-input" type="radio">
+							</div>
+							</div>
+					</div>
+					<div class="dialog__body-cell">
+						<label for="Region" class="dialog__body-label">Region</label>
+						<select id="Region" class="dialog__body-select">
+							<option value="EU">Europe</option>
+							<option value="AS">Asia</option>
+							<option value="NA">North America</option>
+							<option value="SA">South America</option>
+							<option value="AF">Africa </option>
+							<option value="AU">Australia</option>
+						</select>
+					</div>
+					<div class="dialog__separator"><!--Separator--></div>
+					<div class="dialog__body-cell">
+						<label for="phone" class="dialog__body-label">Phone number</label>
+						<input id="phone" type="tel" class="dialog__body-input" placeholder="+">
+					</div>
+					<div class="dialog__body-cell">
+						<label for="email" class="dialog__body-label">E-mail</label>
+						<input id="email" type="email" class="dialog__body-input" placeholder="Your e-mail" >
+					</div>
+					<div class="dialog__body-cell">
+						<label for="register-password" class="dialog__body-label">Password</label>
+						<input id="register-password" type="password" class="dialog__body-input" placeholder="Create password" >
+					</div>
+				</div>
+				<div class="dialog-footer">
+					<button class="button button-medium-large" type="submit">Join Now
+						<span class="button-background button-secondary"></span>
+					</button>
+				</div>
 			</div>
 		</div>
 		<script src="main.js" defer></script>
