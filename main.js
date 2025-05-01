@@ -40,7 +40,7 @@ function initSlider() {
     startAutoSlide();
   }
 
-  // sidebar below---
+  // sidebar ---
   document.addEventListener('DOMContentLoaded', initSlider); 
   const toggleMenu = document.querySelector('.sidebar');
   const navControl = document.querySelector('.header__nav-control');
@@ -56,7 +56,7 @@ function initSlider() {
   });
   
 
-  //light bulb below---
+  //light bulb switcher---
   const Switcher = document.querySelector('.banner__light-switcher');
   const lightBulb = document.querySelector('.banner__light-bulb-icon');
 
@@ -74,7 +74,7 @@ function initSlider() {
   )
 
 
-// --------------Footer
+// --------------Arrows
 
  //  для всех стрелок
 document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => {
@@ -84,8 +84,8 @@ document.querySelectorAll('.arrow-icon, .sidebar__arrow-icon').forEach(arrow => 
     
     if (this.classList.contains('sidebar__arrow-icon')) {
       // Для сайдбар-меню
-      const submenu = this.closest('li').querySelector('.sidebar-submenu');
-      if (submenu) submenu.classList.toggle('sidebar-submenu--open');
+      const submenu = this.closest('li').querySelector('.sidebar__submenu-list');
+      if (submenu) submenu.classList.toggle('sidebar__submenu--open');
     } 
     else if (this.closest('.footer__grid-item')) {
       // Для футера
